@@ -1,5 +1,3 @@
 easy_admin:
     entities:
-        - App\Entity\Additif
-        - App\Entity\Produit
-        - App\Entity\Commande
+        - App\Entity\Fonction
