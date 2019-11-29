@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Site/templates/front/TpConfirm.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/TpConfirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/TpConfirm.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +140,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symphony/first_symfony_website" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
