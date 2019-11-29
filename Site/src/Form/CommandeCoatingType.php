@@ -21,17 +21,16 @@ class CommandeCoatingType extends AbstractType
             ->add('mail')
             ->add('resine', ChoiceType::class, [
                 "choices" => $this->getChoices(),
-                "expanded" => true,
                 "multiple" => false
             ])
             ->add('application')
             ->add('formulation', ChoiceType::class, [
-                "choices" => $this->getChoices(),
+                "choices" => $this->getChoices2(),
                 "expanded" => true,
                 "multiple" => false
             ])
             ->add('provenance', ChoiceType::class, [
-                "choices" => $this->getChoices2(),
+                "choices" => $this->getChoices3(),
                 "expanded" => true,
                 "multiple" => false
             ])
@@ -42,7 +41,7 @@ class CommandeCoatingType extends AbstractType
                 "choice_label"=>"name",
                 "multiple" => true,
                 "expanded" => false,
-                "help" => "Choisissez une ou plusieurs options"
+                "help" => "Cliquer pour commencer la sélection"
             ])
         ;
     }

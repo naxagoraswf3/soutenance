@@ -1,21 +1,22 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-
+<h1>Formulaire Thermoplastique</h1>
 
 {{ form_start(form) }}
 	<div class="row">
-		<div>{{form_row(form.Nom)}}</div>
-		<div>{{form_row(form.Prenom)}}</div>
-		<div>{{form_row(form.Mail)}}</div>
+		<div class="col-md-6">{{form_row(form.Nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div>{{form_row(form.Prenom,  {"label": "Prénom", "attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div>{{form_row(form.Mail,  {"label": "Adresse mail", "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
 	</div>
 	<div class="row">
-		<div>{{form_row(form.Polymere)}}</div>
-		<div>{{form_row(form.Methode)}}</div>
-		<div>{{form_row(form.Masterbatch)}}</div>
-		<div>{{form_row(form.MFI)}}</div>
-		<div>{{form_row(form.quantite)}}</div>
-		<div>{{form_row(form.complement)}}</div>
+		<div  class="col-md-6">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>
+		<div>{{form_row(form.Methode,  {"label": "Méthode de transformation", "attr" : {"placeholder":"Méthode de transformation souhaitée"}})}}</div>
+		<div  class="col-md-6">{{form_row(form.Masterbatch ,  {"label": "Type de Masterbatch"})}}</div>
+		<div>{{form_row(form.MFI,  {"label": "MFI de la résine de base", "attr" : {"placeholder":"Indiquez l'indice de fluidité de votre résine"}})}}</div>
+		<div>{{form_row(form.Quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+		<div>{{form_row(form.Complement ,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		<div>{{form_row(form.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
 	</div>
 		{{ form_rest(form) }}
 	<button class="btn btn-primary">
@@ -23,25 +24,4 @@
 	</button>
 	{{ form_end(form) }}
 
-	
-
-	{{ form_start(formcoat) }}
-	<div class="row">
-		<div>{{form_row(formcoat.nom)}}</div>
-		<div>{{form_row(formcoat.prenom)}}</div>
-		<div>{{form_row(formcoat.mail)}}</div>
-	</div>
-	<div class="row">
-		<div>{{form_row(formcoat.resine)}}</div>
-		<div>{{form_row(formcoat.application)}}</div>
-		<div>{{form_row(formcoat.formulation)}}</div>
-		<div>{{form_row(formcoat.provenance)}}</div>
-		<div>{{form_row(formcoat.quantite)}}</div>
-		<div>{{form_row(formcoat.complement)}}</div>
-	</div>
-		{{ form_rest(formcoat) }}
-	<button class="btn btn-primary">
-		Soumettre
-	</button>
-	{{ form_end(formcoat) }}
 {% endblock %}

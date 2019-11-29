@@ -33,7 +33,7 @@ class CommandeType extends AbstractType
                 "choice_label"=>"name",
                 "multiple" => true,
                 "expanded" => false,
-                "help" => "Choisissez une ou plusieurs options"
+                "help" => "Cliquer pour commencer la sélection"
             ])
         ;
     }
