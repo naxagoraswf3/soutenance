@@ -3,10 +3,141 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+        <!--Iceberg Font-->
+        <link href="https://fonts.googleapis.com/css?family=Iceberg&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.naxagoras-technology.fr/wp-content/uploads/2019/02/naxagoras.png" />
         {% block stylesheets %}{% endblock %}
+        <style>
+            body{
+                font-family: 'Iceberg' , cursive;
+            }
+            .nav-link{
+                font-size: 1.3rem;
+            }
+
+            .dropdown-item{
+                font-size: 1rem;
+            }
+
+            nav{
+                height: 5em;
+            }
+
+            #logo{
+                max-height:5em;
+            }
+
+        </style>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light white">
+
+                <!-- Navbar brand -->
+                <a href="/" class="mr-5">
+                    <img src="https://www.naxagoras-technology.fr/wp-content/uploads/2019/02/naxagoras.png" alt="logo naxagoras" id="logo">
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse d-flex justify-content-around ml-5" id="basicExampleNav">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Accueil
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!-- Dropdown-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Société</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Historique</a>
+                                <a class="dropdown-item" href="#">L'équipe</a>
+                                <a class="dropdown-item" href="#">Distinctions</a>
+                                <a class="dropdown-item" href="#">Naxagoras?</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Naxagoras et Vous</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Positionnement Général</a>
+                                <a class="dropdown-item" href="#">Nos Atouts</a>
+                                <a class="dropdown-item" href="#">Stratégie et Valeurs</a>
+                                <a class="dropdown-item" href="#">Technologie</a>
+                                <a class="dropdown-item" href="#">Nanomatériaux et Nanotechnologie</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Nos Produits</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Plasturgie et Thermoplastiques</a>
+                                <a class="dropdown-item" href="#">Peintures et Revêtements</a>
+                                <a class="dropdown-item" href="#">Encres et Vernis</a>
+                                <a class="dropdown-item" href="#">Plaques MMA</a>
+                                <a class="dropdown-item" href="#">Pigments à Effets</a>
+                                <a class="dropdown-item" href="#">Nanomatériaux et bases actives</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Nos Services</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Recherche et Développement</a>
+                                <a class="dropdown-item" href="#">Expertise</a>
+                                <a class="dropdown-item" href="#">Formation des concepts aux applications</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Demandez un devis
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactez-nous
+                            </a>
+                        </li>
+
+                    </ul>
+
+            </nav>
+            <!--/.Navbar-->
+        </header>
+        {% block body %}
+
+
+        {% endblock %}
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>
