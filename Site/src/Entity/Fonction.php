@@ -33,9 +33,15 @@ class Fonction
      */
     private $commandes;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\CommandeCoating", mappedBy="fonction")
+     */
+    private $commandeCoatings;
+
     public function __construct()
     {
         $this->commandes = new ArrayCollection();
+        $this->commandeCoatings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -90,6 +96,34 @@ class Fonction
         if ($this->commandes->contains($commande)) {
             $this->commandes->removeElement($commande);
             $commande->removeFonction($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|CommandeCoating[]
+     */
+    public function getCommandeCoatings(): Collection
+    {
+        return $this->commandeCoatings;
+    }
+
+    public function addCommandeCoating(CommandeCoating $commandeCoating): self
+    {
+        if (!$this->commandeCoatings->contains($commandeCoating)) {
+            $this->commandeCoatings[] = $commandeCoating;
+            $commandeCoating->addFonction($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommandeCoating(CommandeCoating $commandeCoating): self
+    {
+        if ($this->commandeCoatings->contains($commandeCoating)) {
+            $this->commandeCoatings->removeElement($commandeCoating);
+            $commandeCoating->removeFonction($this);
         }
 
         return $this;
