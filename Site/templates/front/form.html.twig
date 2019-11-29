@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+{{ form_start(form) }}
+	<div class="row">
+		<div>{{form_row(form.Nom)}}</div>
+		<div>{{form_row(form.Prenom)}}</div>
+		<div>{{form_row(form.Mail)}}</div>
+	</div>
+	<div class="row">
+		<div>{{form_row(form.Polymere)}}</div>
+		<div>{{form_row(form.Methode)}}</div>
+		<div>{{form_row(form.Masterbatch)}}</div>
+		<div>{{form_row(form.MFI)}}</div>
+		<div>{{form_row(form.Quantite)}}</div>
+		<div>{{form_row(form.Complement)}}</div>
+	</div>
+		{{ form_rest(form) }}
+	<button class="btn btn-primary">
+		Soumettre
+	</button>
+	{{ form_end(form) }}
+{% endblock %}
