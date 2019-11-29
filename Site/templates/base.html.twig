@@ -9,11 +9,93 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+        <!--Iceberg Font-->
+        <link href="https://fonts.googleapis.com/css?family=Iceberg&display=swap" rel="stylesheet">
         {% block stylesheets %}{% endblock %}
+        <style>
+            body{
+                font-family: 'Iceberg' , cursive;
+            }
+
+        </style>
     </head>
     <body>
+        <header>
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light white">
 
+                <!-- Navbar brand -->
+                <a href="/">
+                    <img src="https://www.naxagoras-technology.fr/wp-content/uploads/2019/02/naxagoras.png" alt="logo naxagoras">
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Accueil
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!-- Dropdown-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Société</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Historique</a>
+                                <a class="dropdown-item" href="#">L'équipe</a>
+                                <a class="dropdown-item" href="#">Distinctions</a>
+                                <a class="dropdown-item" href="#">Localisation</a>
+                                <a class="dropdown-item" href="#">Contact</a>
+                                <a class="dropdown-item" href="#">Naxagoras?</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Naxagoras et Vous</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Positionnement Général</a>
+                                <a class="dropdown-item" href="#">Nos Atouts</a>
+                                <a class="dropdown-item" href="#">Stratégie et Valeurs</a>
+                                <a class="dropdown-item" href="#">Technologie</a>
+                                <a class="dropdown-item" href="#">Nanomatériaux et Nanotechnologie</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown multi-level-dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Nos Produits</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="nav-item dropdown multi-level-dropdown">
+                                    <a class="dropdown-item" href="#">Secteurs</a>
+                                    <ul class="navbar-nav mr-auto">
+                                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Plasturgie et Thermoplastiques</a>
+                                            <a class="dropdown-item" href="#">Peintures et Revêtements</a>
+                                            <a class="dropdown-item" href="#">Encres et Vernis</a>
+                                            <a class="dropdown-item" href="#">Plaques PMMA</a>
+                                    </ul>
+                                </li>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+        </header>
         {% block body %}
+
+
         {% endblock %}
 
         <!-- JQuery -->
