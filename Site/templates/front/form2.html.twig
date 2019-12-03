@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Formulaire Coating</h1>
+<div class="container">
+	{{ form_start(formcoat) }}
+	<div class="row">
+		<div>{{form_row(formcoat.nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div>{{form_row(formcoat.prenom, {"label": "Prénom", "attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div>{{form_row(formcoat.mail,  {"label": "Adresse mail", "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+	</div>
+	<div class="row">
+		<div>{{form_row(formcoat.resine ,  {"label": "Type de résine"})}}</div>
+		<div>{{form_row(formcoat.application,  {"label": "Méthode d'application", "attr" : {"placeholder":"(pistolet, sérigraphie…)"}})}}</div>
+		<div>{{form_row(formcoat.formulation, {"label": "Type de formulation"})}}</div>
+		<div>{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
+		<div>{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+		<div>{{form_row(formcoat.complement,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		<div>{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
+	</div>
+		{{ form_rest(formcoat) }}
+	<button class="btn btn-primary">
+		Soumettre
+	</button>
+	{{ form_end(formcoat) }}
+</div>
+
+	{% endblock %}

@@ -4,6 +4,11 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Commande;
+use App\Form\CommandeType;
+
 
 class FrontController extends AbstractController
 {
@@ -12,11 +17,42 @@ class FrontController extends AbstractController
      */
     public function index()
     {
-        /**
-         * @Route("/", name="front_index", method={"GET"})
-         */
-        return $this->render('front/index.html.twig', [
-            'controller_name' => 'FrontController',
+        return $this->render('front/index.html.twig');
+    }
+
+    /**
+     * @Route("/form", name="form")
+     */
+    public function newCommande(Request $request, EntityManagerInterface $manager)
+    {
+    	$commande = new Commande();
+
+    	$form = $this->createForm(CommandeType::class,$commande);
+    	$form->handleRequest($request);
+    	if($form->isSubmitted() && $form->isValid()){
+    		$commande->setCreatedAt(new \DateTime());
+            $manager->persist($commande);
+            $manager->flush();
+
+            return $this->redirectToRoute("form");
+        }
+        return $this->render('front/form.html.twig', [
+            "form" => $form->createView(),
+            'commande' => $commande
         ]);
     }
+
+        /**
+         * @Route("/devistp")
+         */
+        public function addFriends()
+    {
+        if (isset($_POST['add'])) {
+            $id = $_POST['id'];
+            $user = $this->getUser();
+            $user->addFriend($id);
+        }
+        return $this->redirectToRoute('friends');
+    }
+
 }

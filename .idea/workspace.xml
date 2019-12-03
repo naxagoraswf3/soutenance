@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Site/src/Controller/CommandeTpController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site/templates/front/TpConfirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/TpConfirm.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +146,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../symphony/first_symfony_website" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,7 +165,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="216b1bbd-e54f-4cdc-9069-01f37cd245d8" name="Default Changelist" comment="" />
+      <changelist id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="" />
       <created>1574936169471</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -167,6 +173,8 @@
       <workItem from="1574936175730" duration="1548000" />
       <workItem from="1574937762685" duration="10671000" />
       <workItem from="1575015347941" duration="7872000" />
+      <workItem from="1575274027742" duration="17955000" />
+      <workItem from="1575361440427" duration="4598000" />
     </task>
     <servers />
   </component>
