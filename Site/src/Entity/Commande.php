@@ -45,6 +45,33 @@ class Commande
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $Mail;
+    private $Methode;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $Masterbatch;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $MFI;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $Quantite;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Polymere;
+    private $Complement;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $Methode;
 
     /**
@@ -76,6 +103,17 @@ class Commande
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
      */
     private $fonction;
+     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
+     */
+    private $fonction;
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $autrefonction;
+
+    protected $captchaCode;
 
     public function __construct()
     {
@@ -231,6 +269,33 @@ class Commande
         }
 
         return $this;
+    }
+
+    public function getAutrefonction(): ?string
+    {
+        return $this->autrefonction;
+    }
+
+    public function setAutrefonction(?string $autrefonction): self
+    {
+        $this->autrefonction = $autrefonction;
+
+        return $this;
+    }
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
+
+    }
+
+    public function __toString(){
+        return $this->Nom;
+        
     }
 
 }

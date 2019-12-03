@@ -1,0 +1,39 @@
+
+.border{
+            border: 1px solid #212543 !important;
+            border-radius: 15px !important;
+            text-align: center;
+
+        }
+h1{
+          text-align: center;
+          color : #ef3b24;
+        }
+button{
+
+   display: block;
+   margin : auto;
+   display: inline-block;
+   margin-bottom : 2% !important;
+}
+
+.autre{
+    display: block;
+    margin : auto;
+    display: inline-block;
+   
+}
+input{
+            background-color: #eeeeee !important;
+        }
+span,textarea{
+    background-color: #eeeeee !important;
+ 
+}
+/* .mt-10{
+    margin-top: 20%;
+    }
+    .form-check>label{
+        margin-top: 20%;
+        } */
+            

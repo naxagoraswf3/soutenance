@@ -1,7 +1,7 @@
 easy_admin:
     entities:
         - App\Entity\Fonction
-        - App\Entity\Commande
         - App\Entity\CommandeCoating
+        - App\Entity\Commande
 
 

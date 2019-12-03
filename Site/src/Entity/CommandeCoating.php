@@ -87,6 +87,14 @@ class CommandeCoating
      */
     private $fonction;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $autrefonction;
+
+    protected $captchaCode;
+
+
     public function __construct()
     {
         $this->fonction = new ArrayCollection();
@@ -241,5 +249,28 @@ class CommandeCoating
         }
 
         return $this;
+    }
+
+    public function getAutrefonction(): ?string
+    {
+        return $this->autrefonction;
+    }
+
+    public function setAutrefonction(?string $autrefonction): self
+    {
+        $this->autrefonction = $autrefonction;
+
+        return $this;
+    }
+
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
+
     }
 }

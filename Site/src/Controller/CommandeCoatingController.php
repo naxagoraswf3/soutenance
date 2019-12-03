@@ -2,26 +2,16 @@
 
 namespace App\Controller;
 
-use App\Repository\CommandeCoatingRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\CommandeCoating;
 use App\Form\CommandeCoatingType;
+use App\Repository\CommandeCoatingRepository;
 
 class CommandeCoatingController extends AbstractController
 {
-    /**
-     * @var CommandeCoatingRepository
-     */
-
-    private $repository;
-
-    public function __construct(CommandeCoatingRepository $repository)
-    {
-        $this->repository=$repository;
-    }
     /**
      * @Route("/form2", name="form2")
      */
@@ -36,9 +26,7 @@ class CommandeCoatingController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            $lastId = $commande->getId();
-
-            return $this->redirectToRoute("deviscoating");
+            return $this->redirectToRoute("form");
         }
         return $this->render('front/form2.html.twig', [
             "formcoat" => $form->createView(),
