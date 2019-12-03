@@ -5,12 +5,17 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommandeRepository")
  */
 class Commande
 {
+
+    const MASTERBATCH= [
+        0=>"Masterbatch compatible accepté",
+        1=>"Masterbatch dans la matière de référence"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -21,22 +26,48 @@ class Commande
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom;
+    private $Nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $prenom;
+    private $Prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $email;
+    private $Mail;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Polymere;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Methode;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $Masterbatch;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $MFI;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @Assert\Positive(message="La quantité ne peut être négative")
+     */
+    private $Quantite;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $complements;
+    private $Complement;
 
     /**
      * @ORM\Column(type="datetime")
@@ -44,25 +75,13 @@ class Commande
     private $created_at;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CommandeProduit", mappedBy="id_commande", orphanRemoval=true)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
      */
-    private $id_produit;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CommandeProduit", mappedBy="id_commande", orphanRemoval=true)
-     */
-    private $commandeProduits;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CommandeAdditif", mappedBy="id_commande", orphanRemoval=true)
-     */
-    private $commandeAdditifs;
+    private $fonction;
 
     public function __construct()
     {
-        $this->id_produit = new ArrayCollection();
-        $this->commandeProduits = new ArrayCollection();
-        $this->commandeAdditifs = new ArrayCollection();
+        $this->fonction = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -72,48 +91,108 @@ class Commande
 
     public function getNom(): ?string
     {
-        return $this->nom;
+        return $this->Nom;
     }
 
-    public function setNom(string $nom): self
+    public function setNom(string $Nom): self
     {
-        $this->nom = $nom;
+        $this->Nom = $Nom;
 
         return $this;
     }
 
     public function getPrenom(): ?string
     {
-        return $this->prenom;
+        return $this->Prenom;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setPrenom(string $Prenom): self
     {
-        $this->prenom = $prenom;
+        $this->Prenom = $Prenom;
 
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getMail(): ?string
     {
-        return $this->email;
+        return $this->Mail;
     }
 
-    public function setEmail(string $email): self
+    public function setMail(string $Mail): self
     {
-        $this->email = $email;
+        $this->Mail = $Mail;
 
         return $this;
     }
 
-    public function getComplements(): ?string
+    public function getPolymere(): ?string
     {
-        return $this->complements;
+        return $this->Polymere;
     }
 
-    public function setComplements(?string $complements): self
+    public function setPolymere(string $Polymere): self
     {
-        $this->complements = $complements;
+        $this->Polymere = $Polymere;
+
+        return $this;
+    }
+
+    public function getMethode(): ?string
+    {
+        return $this->Methode;
+    }
+
+    public function setMethode(string $Methode): self
+    {
+        $this->Methode = $Methode;
+
+        return $this;
+    }
+
+    public function getMasterbatch(): ?int
+    {
+        return $this->Masterbatch;
+    }
+
+    public function setMasterbatch(int $Masterbatch): self
+    {
+        $this->Masterbatch = $Masterbatch;
+
+        return $this;
+    }
+
+    public function getMFI(): ?string
+    {
+        return $this->MFI;
+    }
+
+    public function setMFI(string $MFI): self
+    {
+        $this->MFI = $MFI;
+
+        return $this;
+    }
+
+    public function getQuantite(): ?int
+    {
+        return $this->Quantite;
+    }
+
+    public function setQuantite(int $Quantite): self
+    {
+        $this->Quantite = $Quantite;
+
+        return $this;
+    }
+
+    public function getComplement(): ?string
+    {
+        return $this->Complement;
+    }
+
+    public function setComplement(?string $Complement): self
+    {
+        $this->Complement = $Complement;
 
         return $this;
     }
@@ -131,95 +210,33 @@ class Commande
     }
 
     /**
-     * @return Collection|CommandeProduit[]
+     * @return Collection|Fonction[]
      */
-    public function getIdProduit(): Collection
+    public function getFonction(): Collection
     {
-        return $this->id_produit;
+        return $this->fonction;
     }
 
-    public function addIdProduit(CommandeProduit $idProduit): self
+    public function addFonction(Fonction $fonction): self
     {
-        if (!$this->id_produit->contains($idProduit)) {
-            $this->id_produit[] = $idProduit;
-            $idProduit->setIdCommande($this);
+        if (!$this->fonction->contains($fonction)) {
+            $this->fonction[] = $fonction;
         }
 
         return $this;
     }
 
-    public function removeIdProduit(CommandeProduit $idProduit): self
+    public function removeFonction(Fonction $fonction): self
     {
-        if ($this->id_produit->contains($idProduit)) {
-            $this->id_produit->removeElement($idProduit);
-            // set the owning side to null (unless already changed)
-            if ($idProduit->getIdCommande() === $this) {
-                $idProduit->setIdCommande(null);
-            }
+        if ($this->fonction->contains($fonction)) {
+            $this->fonction->removeElement($fonction);
         }
 
         return $this;
     }
 
-    /**
-     * @return Collection|CommandeProduit[]
-     */
-    public function getCommandeProduits(): Collection
-    {
-        return $this->commandeProduits;
+    public function __toString(){
+        return $this->Nom;
     }
 
-    public function addCommandeProduit(CommandeProduit $commandeProduit): self
-    {
-        if (!$this->commandeProduits->contains($commandeProduit)) {
-            $this->commandeProduits[] = $commandeProduit;
-            $commandeProduit->setIdCommande($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCommandeProduit(CommandeProduit $commandeProduit): self
-    {
-        if ($this->commandeProduits->contains($commandeProduit)) {
-            $this->commandeProduits->removeElement($commandeProduit);
-            // set the owning side to null (unless already changed)
-            if ($commandeProduit->getIdCommande() === $this) {
-                $commandeProduit->setIdCommande(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|CommandeAdditif[]
-     */
-    public function getCommandeAdditifs(): Collection
-    {
-        return $this->commandeAdditifs;
-    }
-
-    public function addCommandeAdditif(CommandeAdditif $commandeAdditif): self
-    {
-        if (!$this->commandeAdditifs->contains($commandeAdditif)) {
-            $this->commandeAdditifs[] = $commandeAdditif;
-            $commandeAdditif->setIdCommande($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCommandeAdditif(CommandeAdditif $commandeAdditif): self
-    {
-        if ($this->commandeAdditifs->contains($commandeAdditif)) {
-            $this->commandeAdditifs->removeElement($commandeAdditif);
-            // set the owning side to null (unless already changed)
-            if ($commandeAdditif->getIdCommande() === $this) {
-                $commandeAdditif->setIdCommande(null);
-            }
-        }
-
-        return $this;
-    }
 }

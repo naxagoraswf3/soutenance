@@ -75,6 +75,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "dompdf/dompdf": {
+        "version": "v0.8.3"
+    },
     "easycorp/easy-log-handler": {
         "version": "1.0",
         "recipe": {
@@ -106,11 +109,47 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "h4cc/wkhtmltopdf-amd64": {
+        "version": "0.12.4"
+    },
+    "h4cc/wkhtmltopdf-i386": {
+        "version": "0.12.4"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "knplabs/knp-snappy": {
+        "version": "v1.1.0"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        },
+        "files": [
+            "./config/packages/knp_snappy.yaml"
+        ]
+    },
+    "mikehaertl/php-shellcommand": {
+        "version": "1.6.0"
+    },
+    "mikehaertl/php-tmpfile": {
+        "version": "1.1.1"
+    },
+    "mikehaertl/phpwkhtmltopdf": {
+        "version": "2.4.1"
+    },
     "monolog/monolog": {
         "version": "1.25.2"
+    },
+    "mpdf/mpdf": {
+        "version": "v8.0.4"
+    },
+    "myclabs/deep-copy": {
+        "version": "1.9.3"
     },
     "nikic/php-parser": {
         "version": "v4.3.0"
@@ -123,6 +162,12 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v2.1.3"
+    },
+    "phenx/php-font-lib": {
+        "version": "0.5.1"
+    },
+    "phenx/php-svg-lib": {
+        "version": "v0.3.3"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.0.0"
@@ -145,6 +190,9 @@
     "psr/log": {
         "version": "1.1.2"
     },
+    "sabberworm/php-css-parser": {
+        "version": "8.3.0"
+    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {
@@ -156,6 +204,12 @@
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "setasign/fpdi": {
+        "version": "v2.2.0"
+    },
+    "spipu/html2pdf": {
+        "version": "v5.2.1"
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.2.3"
@@ -514,6 +568,9 @@
     },
     "symfony/yaml": {
         "version": "v4.3.8"
+    },
+    "tecnickcom/tcpdf": {
+        "version": "6.3.2"
     },
     "twig/twig": {
         "version": "v2.12.2"

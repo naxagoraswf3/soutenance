@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Formulaire Thermoplastique</h1>
+
+{{ form_start(form) }}
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">{{form_row(form.Nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div>{{form_row(form.Prenom,  {"label": "Prénom", "attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div>{{form_row(form.Mail,  {"label": "Adresse mail", "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+	</div>
+	<div class="row">
+		<div  class="col-md-6">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>
+		<div>{{form_row(form.Methode,  {"label": "Méthode de transformation", "attr" : {"placeholder":"Méthode de transformation souhaitée"}})}}</div>
+		<div  class="col-md-6">{{form_row(form.Masterbatch ,  {"label": "Type de Masterbatch"})}}</div>
+		<div>{{form_row(form.MFI,  {"label": "MFI de la résine de base", "attr" : {"placeholder":"Indiquez l'indice de fluidité de votre résine"}})}}</div>
+		<div>{{form_row(form.Quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+		<div>{{form_row(form.Complement ,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		<div>{{form_row(form.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
+	</div>
+		{{ form_rest(form) }}
+	<button class="btn btn-primary">
+		Soumettre
+	</button>
+</div>
+	{{ form_end(form) }}
+<a href="{{path('choix')}}">Vous n'êtes pas sûr de votre type de commande? Revenez à la sélection en cliquant ici</a>
+{% endblock %}
