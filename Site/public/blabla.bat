@@ -1,0 +1,1 @@
+wkhtmltopdf --lowquality http://google.com C:\laragon\www\soutenance\Site\public\test123.pdf
