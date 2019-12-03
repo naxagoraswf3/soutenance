@@ -13,9 +13,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Commande
 {
 
-    const MASTERBATCH= [
-        0=>"Masterbatch compatible accepté",
-        1=>"Masterbatch dans la matière de référence"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -49,7 +46,7 @@ class Commande
     private $Methode;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
     private $Masterbatch;
 
@@ -149,12 +146,12 @@ class Commande
         return $this;
     }
 
-    public function getMasterbatch(): ?int
+    public function getMasterbatch(): ?string
     {
         return $this->Masterbatch;
     }
 
-    public function setMasterbatch(int $Masterbatch): self
+    public function setMasterbatch(string $Masterbatch): self
     {
         $this->Masterbatch = $Masterbatch;
 
