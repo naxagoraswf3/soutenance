@@ -28,33 +28,4 @@ class CommandeCoatingRepository extends ServiceEntityRepository
             ->createQuery(' SELECT q.id FROM AppBundle:Commande q WHERE q.id=LAST_INSERT_ID(); ') ;
     }
 
-    // /**
-    //  * @return CommandeCoating[] Returns an array of CommandeCoating objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?CommandeCoating
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-
-    }
-    */
 }

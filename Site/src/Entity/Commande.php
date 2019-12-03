@@ -45,7 +45,6 @@ class Commande
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Mail;
     private $Methode;
 
     /**
@@ -63,31 +62,7 @@ class Commande
      */
     private $Quantite;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Polymere;
-    private $Complement;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Methode;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $Masterbatch;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $MFI;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $Quantite;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -103,15 +78,12 @@ class Commande
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
      */
     private $fonction;
-     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
-     */
-    private $fonction;
-
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $autrefonction;
+
 
     protected $captchaCode;
 
@@ -295,7 +267,7 @@ class Commande
 
     public function __toString(){
         return $this->Nom;
-        
+
     }
 
 }

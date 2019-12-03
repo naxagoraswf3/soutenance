@@ -88,7 +88,7 @@ class CommandeCoating
     private $fonction;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $autrefonction;
 
@@ -272,5 +272,9 @@ class CommandeCoating
     {
         $this->captchaCode = $captchaCode;
 
+    }
+
+    public function __toString(){
+        return $this->nom;
     }
 }

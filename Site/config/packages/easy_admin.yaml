@@ -1,7 +1,48 @@
 easy_admin:
     entities:
-        - App\Entity\Fonction
-        - App\Entity\CommandeCoating
-        - App\Entity\Commande
+        Commande:
+            class: App\Entity\Commande
+            list:
+                fields:
+                    - {property: "nom"}
+                    - {property: "prenom"}
+                    - {property: "mail"}
+                    - {property: "polymere"}
+                    - {property: "methode"}
+                    - {property: "masterbatch"}
+                    - {property: "mfi"}
+                    - {property: "fonction"}
+                    - {property: "autrefonction"}
+                    - {property: "complement"}
+                    - {property: "created_at"}
+
+        CommandeCoating:
+            class: App\Entity\CommandeCoating
+            list:
+                fields:
+                  - {property: "nom"}
+                  - {property: "prenom"}
+                  - {property: "mail"}
+                  - {property: "resine"}
+                  - {property: "application"}
+                  - {property: "formulation"}
+                  - {property: "provenance"}
+                  - {property: "quantite"}
+                  - {property: "fonction"}
+                  - {property: "autrefonction"}
+                  - {property: "complement"}
+
+        Fonctions:
+            class: App\Entity\Fonction
+            list:
+                fields:
+                  - {property: "name"}
+                  - {property: "visible"}
+
+
+
+
+
+
 
 

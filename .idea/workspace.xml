@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Site/src/Controller/CommandeTpController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/soutenance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/soutenance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Site/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/CommandeTpController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/CoatingConfirm.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +143,9 @@
       <path value="$PROJECT_DIR$/Site/vendor/phenx/php-font-lib" />
       <path value="$PROJECT_DIR$/Site/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/Site/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/Site/vendor/captcha-com/symfony-captcha-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/captcha-com/captcha" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/mailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UEyhZB7zYw5vNrpQHsDjhv5Pdn" />
@@ -174,7 +182,7 @@
       <workItem from="1574937762685" duration="10671000" />
       <workItem from="1575015347941" duration="7872000" />
       <workItem from="1575274027742" duration="17955000" />
-      <workItem from="1575361440427" duration="4598000" />
+      <workItem from="1575361440427" duration="11222000" />
     </task>
     <servers />
   </component>
