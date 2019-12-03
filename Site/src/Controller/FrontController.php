@@ -10,6 +10,10 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Commande;
+use App\Form\CommandeType;
+
 
 
 class FrontController extends AbstractController
@@ -44,17 +48,11 @@ class FrontController extends AbstractController
         ]);
     }
 
-        /**
-         * @Route("/devistp")
-         */
-        public function addFriends()
+      /**
+     * @Route("/choice", name="choix")
+     */
+    public function choice()
     {
-        if (isset($_POST['add'])) {
-            $id = $_POST['id'];
-            $user = $this->getUser();
-            $user->addFriend($id);
-        }
-        return $this->redirectToRoute('friends');
+        return $this->render('front/select.html.twig');
     }
-
 }

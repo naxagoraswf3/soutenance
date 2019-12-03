@@ -33,26 +33,5 @@ class CommandeCoatingController extends AbstractController
             'commandecoat' => $commande
         ]);
     }
-    /**
-     * @Route ("/CoatingConfirm", name="deviscoating")
-     */
 
 
-    public function  showDevis(){
-
-        return $this->render("front/CoatingConfirm.html.twig", compact('coatingorder    <'));
-    }
-
-    /**
-     * @Route("/deviscoating")
-     */
-    public function newDevis()
-    {
-        if (isset($_POST['id'])) {
-            $id = $_POST['id'];
-            $user = $this->getUser();
-            $user->addFriend($id);
-        }
-        return $this->redirectToRoute('deviscoating');
-    }
-}

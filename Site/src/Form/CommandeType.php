@@ -33,7 +33,9 @@ class CommandeType extends AbstractType
             ->add('Polymere')
             ->add('Methode')
             ->add('Masterbatch', ChoiceType::class, [
-                "choices" => $this->getChoices(),
+                "choices" => [
+                    "Masterbatch compatible accepté"=>"Masterbatch compatible accepté",
+                    "Masterbatch dans la matière de référence"=>"Masterbatch dans la matière de référence"],
                 "expanded" => true,
                 "multiple" => false
             ])
@@ -74,15 +76,5 @@ class CommandeType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Commande::class,
         ]);
-    }
-
-     private function getChoices(){
-        $choices = Commande::MASTERBATCH;
-        $output = [];
-        foreach ($choices as $k => $v) {
-            $output[$v] =$k;
-        }
-
-        return $output;
     }
 }
