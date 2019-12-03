@@ -1,3 +1,11 @@
 easy_admin:
     entities:
-        - App\Entity\Fonction
+        Commande:
+          class: App\Entity\Commande
+          list:
+            fields:
+              - {property: "fonction"}
+        Commande2:
+          class: App\Entity\CommandeCoating
+        Fonction:
+          class: App\Entity\Fonction

@@ -38,7 +38,15 @@ class FrontController extends AbstractController
         }
         return $this->render('front/form.html.twig', [
             "form" => $form->createView(),
-            'commande' => $commande
+             "formcoat" => $form->createView()
         ]);
+    }
+
+      /**
+     * @Route("/choice", name="choix")
+     */
+    public function choice()
+    {
+        return $this->render('front/select.html.twig');
     }
 }

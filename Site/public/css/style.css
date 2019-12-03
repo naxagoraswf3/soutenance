@@ -1,0 +1,17 @@
+.choix:hover{
+	transform: scale(1.1);
+	filter: none;
+	-webkit-filter: drop-shadow(8px 8px 10px gray); 
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.choix{
+	transition: transform 2s;
+	width: 50em;
+	font-size: 4em;
+}
+
+a, a:hover{
+	text-decoration:none;
+	color:inherit;
+}

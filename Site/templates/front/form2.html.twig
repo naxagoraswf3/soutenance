@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>Formulaire Coating</h1>
-
+<div class="container">
 	{{ form_start(formcoat) }}
 	<div class="row">
 		<div>{{form_row(formcoat.nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
@@ -23,5 +23,7 @@
 		Soumettre
 	</button>
 	{{ form_end(formcoat) }}
+</div>
+<a href="{{path('choix')}}">Vous n'êtes pas sûr de votre type de commande? Revenez à la sélection en cliquant ici</a>
 
 	{% endblock %}
