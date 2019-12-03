@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+{% form_theme formcoat 'bootstrap_4_layout.html.twig' %}
+
+	    {% block stylesheets %}
+		 <link rel="stylesheet" type="text/css" href="/css/formstyle.css" />
+  		 {% endblock %}
+{% block body %}
+<h1>Formulaire Coating</h1>
+<div class="container border">
+	{{ form_start(formcoat) }}
+	<div class="row">
+		<div  class="col-md-4">{{form_row(formcoat.nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div class="col-md-4">{{form_row(formcoat.prenom, {"attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div class="col-md-4">{{form_row(formcoat.mail,  { "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+	</div>
+	<div class="row append">
+		<div class="col-md-6">{{form_row(formcoat.resine ,  {"label": "Type de résine"})}}</div>
+		<div class="col-md-6">{{form_row(formcoat.application,  {"label": "Méthode d'application", "attr" : {"placeholder":"(pistolet, sérigraphie…)"}})}}</div>
+		<div class="col-md-4 offset-2">{{form_row(formcoat.formulation, {"label": "Type de formulation"})}}</div>
+		<div class="col-md-3">{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
+		<div class="col-md-6">{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
+		<div class="col-md-6">{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+
+		<p class="btn btn-outline-danger col-md-3 autre" id="autre">Autre  fonction</p>
+
+		<div class="col-md-6">{{form_row(formcoat.autrefonction,  {"label": "Autre fonction", "attr" : {"placeholder":"Ajouter une fonction"}})}}</div>
+
+		<div class="col-md-12">{{form_row(formcoat.complement,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		<div class="col-md-4 offset-4 my-2">{{form_row(formcoat.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
+		<div class="col-md-6 offset-3 my-2">{{form_row(formcoat.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter. ?"})}}</div>
+
+	</div>
+		{{ form_rest(formcoat) }}
+
+		
+		{% set formErrors = formcoat.vars.errors.form.getErrors(true) %}
+		{% if formErrors|length %}
+		 <div class="alert alert-danger">
+		 	<ul>
+			 {% for error in formErrors %}
+			 	<li> {{ error.message }}</li>
+			{% endfor %}		
+			</ul>
+			</div>	 
+			{% endif %}		
+
+
+	<button class="btn btn-outline-danger">
+		Soumettre
+	</button>
+	{{ form_end(formcoat) }}
+</div>
+
+	{% endblock %}
+	        
+
+        {% block javascripts %}
+		    <script src="/js/form2script.js"></script>
+
+
+		
+		{% endblock %}

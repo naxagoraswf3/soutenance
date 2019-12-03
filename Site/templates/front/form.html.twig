@@ -1,0 +1,58 @@
+{% extends "base.html.twig" %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+	    {% block stylesheets %}
+		 <link rel="stylesheet" type="text/css" href="/css/formstyle.css" />
+  		 {% endblock %}
+{% block body %}
+<h1>Formulaire Thermoplastique</h1>
+
+{{ form_start(form) }}
+<div class="container border">
+	<div class="row ">
+		<div class="col-md-4">{{form_row(form.Nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div class="col-md-4">{{form_row(form.Prenom,  {"attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div class="col-md-4">{{form_row(form.Mail,  {"attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>
+		<div class="col-md-12">{{form_row(form.Methode,  {"label": "Méthode de transformation", "attr" : {"placeholder":"Méthode de transformation souhaitée"}})}}</div>
+		<div  class="col-md-12">{{form_row(form.Masterbatch ,  {"label": "Type de Masterbatch"})}}</div>
+		<div class="col-md-12">{{form_row(form.MFI,  {"label": "MFI de la résine de base", "attr" : {"placeholder":"Indiquez l'indice de fluidité de votre résine"}})}}</div>
+		<div class="col-md-6">{{form_row(form.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
+		<div class="col-md-6">{{form_row(form.Quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+		<p class="btn btn-outline-danger col-md-3 autre" id="autre">Autre  fonction</p>
+		<div class="col-md-6">{{form_row(form.autrefonction,  {"label": "Autre fonction", "attr" : {"placeholder":"Ajouter une fonction"}})}}</div>
+		<div class="col-md-12">{{form_row(form.Complement ,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		 <div class="col-md-4 offset-4 my-2">{{form_row(form.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
+		<div class="col-md-6 offset-3 my-2">{{form_row(form.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter ?"})}}</div>
+		 {# <div class="col-md-6 my-2">{{form_row(form.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
+		<div class="col-md-6 my-2 mt-10">{{form_row(form.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter. ?", "attr" : {"class":"mt-10"}})}}</div> #}
+	</div>
+		{{ form_rest(form) }}
+
+
+		{% set formErrors = form.vars.errors.form.getErrors(true) %}
+		{% if formErrors|length %}
+		 <div class="alert alert-danger">
+		 	<ul>
+			 {% for error in formErrors %}
+			 	<li> {{ error.message }}</li>
+			{% endfor %}		
+			</ul>
+			</div>	 
+			{% endif %}		
+
+		<button class="btn btn-outline-danger">
+			Soumettre
+		</button>
+</div>
+	{{ form_end(form) }}
+
+{% endblock %}
+
+        {% block javascripts %}
+		    <script src="/js/formscript.js"></script>
+
+
+		
+		{% endblock %}

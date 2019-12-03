@@ -7,14 +7,24 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\CommandeRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CommandeCoatingRepository")
  */
-class Commande
+class CommandeCoating
 {
 
-    const MASTERBATCH= [
-        0=>"Masterbatch compatible accepté",
-        1=>"Masterbatch dans la matière de référence"];
+    const RESINE= [
+        0=>"Aqueuse",
+        1=>"Solutée",
+        2=>"100%",
+        3=>"Autre"];
+
+        const FORMULATION= [
+        0=>"Formulation à 100%",
+        1=>"Slurry concentré à diluer"];
+
+        const PROVENANCE= [
+        0=>"Formulation dans résine fournie",
+        1=>"Résine Naxagoras compatible"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -25,47 +35,47 @@ class Commande
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Nom;
+    private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Prenom;
+    private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Mail;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Polymere;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Methode;
+    private $mail;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $Masterbatch;
+    private $resine;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $MFI;
+    private $application;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $Quantite;
+    private $formulation;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $provenance;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $quantite;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $Complement;
+    private $complement;
 
     /**
      * @ORM\Column(type="datetime")
@@ -73,10 +83,9 @@ class Commande
     private $created_at;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandeCoatings")
      */
     private $fonction;
-
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -84,6 +93,7 @@ class Commande
     private $autrefonction;
 
     protected $captchaCode;
+
 
     public function __construct()
     {
@@ -97,108 +107,108 @@ class Commande
 
     public function getNom(): ?string
     {
-        return $this->Nom;
+        return $this->nom;
     }
 
-    public function setNom(string $Nom): self
+    public function setNom(string $nom): self
     {
-        $this->Nom = $Nom;
+        $this->nom = $nom;
 
         return $this;
     }
 
     public function getPrenom(): ?string
     {
-        return $this->Prenom;
+        return $this->prenom;
     }
 
-    public function setPrenom(string $Prenom): self
+    public function setPrenom(string $prenom): self
     {
-        $this->Prenom = $Prenom;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
     public function getMail(): ?string
     {
-        return $this->Mail;
+        return $this->mail;
     }
 
-    public function setMail(string $Mail): self
+    public function setMail(string $mail): self
     {
-        $this->Mail = $Mail;
+        $this->mail = $mail;
 
         return $this;
     }
 
-    public function getPolymere(): ?string
+    public function getResine(): ?int
     {
-        return $this->Polymere;
+        return $this->resine;
     }
 
-    public function setPolymere(string $Polymere): self
+    public function setResine(int $resine): self
     {
-        $this->Polymere = $Polymere;
+        $this->resine = $resine;
 
         return $this;
     }
 
-    public function getMethode(): ?string
+    public function getApplication(): ?string
     {
-        return $this->Methode;
+        return $this->application;
     }
 
-    public function setMethode(string $Methode): self
+    public function setApplication(string $application): self
     {
-        $this->Methode = $Methode;
+        $this->application = $application;
 
         return $this;
     }
 
-    public function getMasterbatch(): ?int
+    public function getFormulation(): ?int
     {
-        return $this->Masterbatch;
+        return $this->formulation;
     }
 
-    public function setMasterbatch(int $Masterbatch): self
+    public function setFormulation(int $formulation): self
     {
-        $this->Masterbatch = $Masterbatch;
+        $this->formulation = $formulation;
 
         return $this;
     }
 
-    public function getMFI(): ?string
+    public function getProvenance(): ?int
     {
-        return $this->MFI;
+        return $this->provenance;
     }
 
-    public function setMFI(string $MFI): self
+    public function setProvenance(int $provenance): self
     {
-        $this->MFI = $MFI;
+        $this->provenance = $provenance;
 
         return $this;
     }
 
     public function getQuantite(): ?int
     {
-        return $this->Quantite;
+        return $this->quantite;
     }
 
-    public function setQuantite(int $Quantite): self
+    public function setQuantite(int $quantite): self
     {
-        $this->Quantite = $Quantite;
+        $this->quantite = $quantite;
 
         return $this;
     }
 
     public function getComplement(): ?string
     {
-        return $this->Complement;
+        return $this->complement;
     }
 
-    public function setComplement(?string $Complement): self
+    public function setComplement(string $complement): self
     {
-        $this->Complement = $Complement;
+        $this->complement = $complement;
 
         return $this;
     }
@@ -216,7 +226,7 @@ class Commande
     }
 
     /**
-     * @return Collection|Fonction[]
+     * @return Collection|fonction[]
      */
     public function getFonction(): Collection
     {
@@ -252,6 +262,7 @@ class Commande
 
         return $this;
     }
+
     public function getCaptchaCode()
     {
         return $this->captchaCode;
@@ -262,10 +273,4 @@ class Commande
         $this->captchaCode = $captchaCode;
 
     }
-
-    public function __toString(){
-        return $this->Nom;
-        
-    }
-
 }
