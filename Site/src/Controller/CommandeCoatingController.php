@@ -17,12 +17,12 @@ class CommandeCoatingController extends AbstractController
      */
     public function newCommandeCoating(Request $request, EntityManagerInterface $manager)
     {
-    	$commande = new CommandeCoating();
+        $commande = new CommandeCoating();
 
-    	$form = $this->createForm(CommandeCoatingType::class,$commande);
-    	$form->handleRequest($request);
-    	if($form->isSubmitted() && $form->isValid()){
-    		$commande->setCreatedAt(new \DateTime());
+        $form = $this->createForm(CommandeCoatingType::class, $commande);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $commande->setCreatedAt(new \DateTime());
             $manager->persist($commande);
             $manager->flush();
 
@@ -33,5 +33,6 @@ class CommandeCoatingController extends AbstractController
             'commandecoat' => $commande
         ]);
     }
+}
 
 
