@@ -42,15 +42,15 @@ class EmailController extends AbstractController
 
             $email = (new Email())
             ->from('client@email.com')
-            ->to('naxagoras@gmail.com')
+            ->to('wardog67435@gmail.com')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
             //->priority(Email::PRIORITY_HIGH)
-            ->subject('Requete de devis')
-            ->text('voila votre commande!')
-            ->html('<p>Ouvrire la pj !</p>')
-            ->attachFromPath('../public/wf3.pdf');
+            ->subject('Nouvelle demande de devis')
+            ->text('Une nouvelle demande de devis a été remplie sur le site Naxagoras-Technology!')
+            ->html('<a href="/admin">Vous pouvez également y accéder depuis l interface administrateur du site.</a>')
+            ->attachFromPath('../devis/devis.pdf');
             
 
         $mailer->send($email);

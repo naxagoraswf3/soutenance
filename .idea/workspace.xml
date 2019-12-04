@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/soutenance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/soutenance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Site/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/devis/mypdf.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/EmailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/EmailController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/ToPdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/ToPdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191128141722.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129082317.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129083153.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129083439.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129083920.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129105153.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129132556.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191129133104.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191202095208.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191203091816.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191203114814.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191203114931.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Migrations/Version20191203144139.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +156,18 @@
       <path value="$PROJECT_DIR$/Site/vendor/captcha-com/symfony-captcha-bundle" />
       <path value="$PROJECT_DIR$/Site/vendor/captcha-com/captcha" />
       <path value="$PROJECT_DIR$/Site/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/Site/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/Site/vendor/spipu/html2pdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/phpwkhtmltopdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/php-shellcommand" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/php-tmpfile" />
+      <path value="$PROJECT_DIR$/Site/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/tecnickcom/tcpdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/Site/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/Site/vendor/h4cc/wkhtmltopdf-amd64" />
+      <path value="$PROJECT_DIR$/Site/vendor/h4cc/wkhtmltopdf-i386" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UEyhZB7zYw5vNrpQHsDjhv5Pdn" />
@@ -174,6 +205,7 @@
       <workItem from="1575015347941" duration="7872000" />
       <workItem from="1575274027742" duration="17955000" />
       <workItem from="1575361440427" duration="13143000" />
+      <workItem from="1575447256016" duration="9031000" />
     </task>
     <servers />
   </component>

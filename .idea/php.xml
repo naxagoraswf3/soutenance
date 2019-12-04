@@ -115,6 +115,18 @@
       <path value="$PROJECT_DIR$/Site/vendor/captcha-com/symfony-captcha-bundle" />
       <path value="$PROJECT_DIR$/Site/vendor/captcha-com/captcha" />
       <path value="$PROJECT_DIR$/Site/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/Site/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/Site/vendor/spipu/html2pdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/phpwkhtmltopdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/php-shellcommand" />
+      <path value="$PROJECT_DIR$/Site/vendor/mikehaertl/php-tmpfile" />
+      <path value="$PROJECT_DIR$/Site/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/tecnickcom/tcpdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/Site/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/Site/vendor/h4cc/wkhtmltopdf-amd64" />
+      <path value="$PROJECT_DIR$/Site/vendor/h4cc/wkhtmltopdf-i386" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

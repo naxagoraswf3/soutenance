@@ -45,7 +45,7 @@ class ToPdfController extends AbstractController {
 		// In this case, we want to write the file in the public directory
 
 		// e.g /var/www/project/public/mypdf.pdf
-		$pdfFilepath = '../devis/mypdf.pdf';
+		$pdfFilepath = '../devis/devis.pdf';
 
 		// Write file to the desired path
 		file_put_contents($pdfFilepath, $output);

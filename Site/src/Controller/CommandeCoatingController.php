@@ -26,7 +26,7 @@ class CommandeCoatingController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("form");
+            return $this->redirectToRoute("pdf");
         }
         return $this->render('front/form2.html.twig', [
             "formcoat" => $form->createView(),

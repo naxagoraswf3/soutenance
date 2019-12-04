@@ -37,7 +37,7 @@ class FrontController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("form");
+            return $this->redirectToRoute("pdf");
         }
         return $this->render('front/form.html.twig', [
             "form" => $form->createView(),
@@ -51,5 +51,14 @@ class FrontController extends AbstractController
     public function choice()
     {
         return $this->render('front/select.html.twig');
+    }
+
+    /**
+     * @Route ("/confirmtp", name="confirmtp")
+     */
+
+    public function tpConfirm()
+    {
+        return $this->render('front/TpConfirm');
     }
 }

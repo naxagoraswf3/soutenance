@@ -28,8 +28,17 @@
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/easycorp/easyadmin-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/h4cc/wkhtmltopdf-amd64" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/h4cc/wkhtmltopdf-i386" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/knplabs/knp-snappy" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/knplabs/knp-snappy-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/mikehaertl/php-shellcommand" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/mikehaertl/php-tmpfile" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/mikehaertl/phpwkhtmltopdf" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/mpdf/mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/ocramius/package-versions" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/ocramius/proxy-manager" />
@@ -45,6 +54,8 @@
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/sabberworm/php-css-parser" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/spipu/html2pdf" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/symfony/asset" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/symfony/browser-kit" />
@@ -114,6 +125,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/symfony/web-profiler-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/symfony/web-server-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/Site/vendor/tecnickcom/tcpdf" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/Site/vendor/zendframework/zend-code" />
