@@ -13,6 +13,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Commande
 {
 
+    const MASTERBATCH= [
+        0=>"Masterbatch compatible accepté",
+        1=>"Masterbatch dans la matière de référence"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -46,7 +49,7 @@ class Commande
     private $Methode;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
     private $Masterbatch;
 
@@ -57,14 +60,20 @@ class Commande
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\Positive(message="La quantité ne peut être négative")
      */
     private $Quantite;
 
+
+
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $Complement;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
+     */
+    private $fonction;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -73,15 +82,6 @@ class Commande
 
 
     protected $captchaCode;
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $created_at;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
-     */
-    private $fonction;
 
     public function __construct()
     {
@@ -153,12 +153,12 @@ class Commande
         return $this;
     }
 
-    public function getMasterbatch(): ?string
+    public function getMasterbatch(): ?int
     {
         return $this->Masterbatch;
     }
 
-    public function setMasterbatch(string $Masterbatch): self
+    public function setMasterbatch(int $Masterbatch): self
     {
         $this->Masterbatch = $Masterbatch;
 

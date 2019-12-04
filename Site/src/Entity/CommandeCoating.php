@@ -13,6 +13,19 @@ use Symfony\Component\Validator\Constraints as Assert;
 class CommandeCoating
 {
 
+    const RESINE= [
+        0=>"Aqueuse",
+        1=>"Solutée",
+        2=>"100%",
+        3=>"Autre"];
+
+        const FORMULATION= [
+        0=>"Formulation à 100%",
+        1=>"Slurry concentré à diluer"];
+
+        const PROVENANCE= [
+        0=>"Formulation dans résine fournie",
+        1=>"Résine Naxagoras compatible"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -36,7 +49,7 @@ class CommandeCoating
     private $mail;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
     private $resine;
 
@@ -46,12 +59,12 @@ class CommandeCoating
     private $application;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
     private $formulation;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
     private $provenance;
 
@@ -130,12 +143,12 @@ class CommandeCoating
         return $this;
     }
 
-    public function getResine(): ?string
+    public function getResine(): ?int
     {
         return $this->resine;
     }
 
-    public function setResine(string $resine): self
+    public function setResine(int $resine): self
     {
         $this->resine = $resine;
 
@@ -154,24 +167,24 @@ class CommandeCoating
         return $this;
     }
 
-    public function getFormulation(): ?string
+    public function getFormulation(): ?int
     {
         return $this->formulation;
     }
 
-    public function setFormulation(string $formulation): self
+    public function setFormulation(int $formulation): self
     {
         $this->formulation = $formulation;
 
         return $this;
     }
 
-    public function getProvenance(): ?string
+    public function getProvenance(): ?int
     {
         return $this->provenance;
     }
 
-    public function setProvenance(string $provenance): self
+    public function setProvenance(int $provenance): self
     {
         $this->provenance = $provenance;
 
