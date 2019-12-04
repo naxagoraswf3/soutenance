@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\CommandeCoating;
 use App\Form\CommandeCoatingType;
+use App\Repository\CommandeCoatingRepository;
 
 class CommandeCoatingController extends AbstractController
 {

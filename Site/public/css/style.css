@@ -1,17 +1,21 @@
-.choix:hover{
-	transform: scale(1.1);
-	filter: none;
-	-webkit-filter: drop-shadow(8px 8px 10px gray); 
-  filter: drop-shadow(8px 8px 10px gray);
-}
 
-.choix{
-	transition: transform 2s;
-	width: 50em;
-	font-size: 4em;
-}
+.border{
+            border: 1px solid #ef3b24 !important;
+            border-radius: 15px !important;
+            text-align: center;
 
-a, a:hover{
-	text-decoration:none;
-	color:inherit;
+        }
+h1{
+          text-align: center;
+          color : #ef3b24;
+        }
+button{
+
+   display: block;
+   margin : auto;
+   display: inline-block;
+   margin-bottom : 2%;
 }
+input{
+            background-color: #afafaf;
+        }

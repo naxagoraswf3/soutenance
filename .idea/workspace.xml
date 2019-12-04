@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/2b9891aa9d8c6d946e9e1387733eff76" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/523473673dd4e4135b410333987c3ce3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/79227990fbc7b7013a862651bf4b734c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/c4e727672138e18ffe50271924bddef6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/c6cdbda72ee86a44994fe5f88c4a84d7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/devis/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/datatables-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/directives.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/flag.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/jquery.zmd.hierarchical-display.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/rating.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/modules/animations-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/mdb-favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/svg/arrow_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/svg/arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/datatables-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/datatables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/directives.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/flag.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/imagesloaded.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/jquery.zmd.hierarchical-display.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/masonry.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/rating.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/mdb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/animations-extended.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/forms-free.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/scrolling-navbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/treeview.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/blabla.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/test.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/testdevis.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/testdevis.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Controller/ToPdfController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Migrations/Version20191128141722.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Migrations/Version20191203091816.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/form/CoatingConfirm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/form/TpConfirm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/front/select.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/test.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/to_pdf/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Site/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Form/CommandeCoatingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Form/CommandeCoatingType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Form/CommandeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Form/CommandeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Repository/ContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/form2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/form2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/index.html.twig" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/Site/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/Site/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/Site/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/Site/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Site/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Site/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/Site/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/Site/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Site/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Site/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Site/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/Site/vendor/composer" />
+      <path value="$PROJECT_DIR$/Site/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/Site/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/Site/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/Site/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/Site/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/Site/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/Site/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/Site/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/Site/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/Site/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/Site/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Site/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/Site/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/Site/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/Site/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/Site/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/Site/vendor/captcha-com/symfony-captcha-bundle" />
+      <path value="$PROJECT_DIR$/Site/vendor/captcha-com/captcha" />
+      <path value="$PROJECT_DIR$/Site/vendor/symfony/mailer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1UEyhZB7zYw5vNrpQHsDjhv5Pdn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symphony/first_symfony_website" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="" />
+      <created>1574936169471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574936169471</updated>
+      <workItem from="1574936175730" duration="1548000" />
+      <workItem from="1574937762685" duration="10671000" />
+      <workItem from="1575015347941" duration="7872000" />
+      <workItem from="1575274027742" duration="17955000" />
+      <workItem from="1575361440427" duration="12776000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Site/src/Controller/FrontController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Site/vendor/symfony/config/Loader/FileLoader.php</url>
+          <line>165</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

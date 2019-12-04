@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation de votre demande{% endblock %}
+
+{% block body %}
+
+
+
+    <main class="mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <table class="table">
+                            <thead class="black white-text">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prenom</th>
+                                <th scope="col">email</th>
+                                <th scope="col">Type de résine</th>
+                                <th scope="col">Méthode d'application</th>
+                                <th scope="col">Type de formulation</th>
+                                <th scope="col">Résine fournie/Naxagoras</th>
+                                <th scope="col">Fonction(s)</th>
+                                <th scope="col">Quantité</th>
+                                <th scope="col">Complément d'information</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>{{ deviscoating.nom }}</td>
+{#                                <td>{{ commande_coating.prenom }}</td>#}
+{#                                <td>{{ commande_coating.mail }}</td>#}
+{#                                <td>{{ commande_coating.resine }}</td>#}
+{#                                <td>{{ commande_coating.application }}</td>#}
+{#                                <td>{{ commande_coating.formulation }}</td>#}
+{#                                <td>{{ commande_coating.provenance }}</td>#}
+{#                                <td>{{ commande_coating.fonction }}</td>#}
+{#                                <td>{{ commande_coating.quantite }}</td>#}
+{#                                <td>{{ commande_coating.complement }}</td>#}
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

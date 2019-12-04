@@ -3,12 +3,20 @@
 namespace App\Form;
 
 use App\Entity\Commande;
+use App\Entity\Fonction;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use App\Entity\Fonction;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
+
 
 class CommandeType extends AbstractType
 {
@@ -37,6 +45,25 @@ class CommandeType extends AbstractType
                 "expanded" => false,
                 "help" => "Cliquer pour commencer la sélection"
             ])
+            ->add('autrefonction', HiddenType::class)
+            ->add("captchaCode", CaptchaType::class,[
+                'captchaConfig'=> 'ValidationForm',
+                'constraints' => [
+                    new ValidCaptcha([
+                        'message' => 'captcha invalide'
+                    ])
+                ]
+            ])
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'You should agree to our terms.',
+                    ]),
+                ],
+            ])
+
+
         ;
     }
 
