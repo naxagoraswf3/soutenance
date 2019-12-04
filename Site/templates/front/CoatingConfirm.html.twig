@@ -30,16 +30,19 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>{{ commandes.Nom }}</td>
+                                <td>{{ commandes.nom }}</td>
                                 <td>{{ commandes.prenom }}</td>
                                 <td>{{ commandes.mail }}</td>
                                 <td>{{ commandes.resine }}</td>
                                 <td>{{ commandes.application }}</td>
                                 <td>{{ commandes.formulation }}</td>
                                 <td>{{ commandes.provenance }}</td>
+                                {% for commande in commandes %}
                                 <td>{{ commandes.fonction }}</td>
+                                {% endfor %}
                                 <td>{{ commandes.quantite }}</td>
                                 <td>{{ commandes.complement }}</td>
+                                {{dump(commandes)}}
                             </tr>
                             </tbody>
                         </table>

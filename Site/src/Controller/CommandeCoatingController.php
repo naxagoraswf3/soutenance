@@ -27,7 +27,7 @@ class CommandeCoatingController extends AbstractController
      */
     public function showCT(CommandeCoatingRepository $repository){
       $commandes= $repository->findLastId("id");
-      dump($commandes);
+      // dump($commandes);
       return $this->render("front/CoatingConfirm.html.twig", ["commandes" => $commandes]);
     }
 
