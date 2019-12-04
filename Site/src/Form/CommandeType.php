@@ -23,10 +23,6 @@ class CommandeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Nom', TextType::class, ["label"=> "Nom"]
-            )
-            ->add('Prenom', TextType::class, ["label"=> "Prénom"])
-            ->add('Mail',EmailType::class, ["label"=> "Adresse mail"])
             ->add('Nom')
             ->add('Prenom')
             ->add('Mail')
@@ -50,14 +46,8 @@ class CommandeType extends AbstractType
                 "help" => "Cliquer pour commencer la sélection"
             ])
             ->add('autrefonction', HiddenType::class)
-            ->add("captchaCode", CaptchaType::class,[
-                'captchaConfig'=> 'ValidationForm',
-                'constraints' => [
-                    new ValidCaptcha([
-                        'message' => 'captcha invalide'
-                    ])
-                ]
-            ])
+            
+            
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [

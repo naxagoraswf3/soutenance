@@ -5,16 +5,40 @@ namespace App\Controller;
 use App\Entity\Commande;
 use App\Entity\CommandeCoating;
 use App\Form\CommandeCoatingType;
-use App\Form\CommandeType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Form\CommandeType;
+use App\Repository\CommandeRepository;
 
 
 
 class FrontController extends AbstractController
 {
+
+    /**
+     * @var CommandeRepository
+     */
+    private $repository;
+    public function __construct(CommandeRepository $repository)
+    {
+      $this->repository = $repository;
+    }
+
+    /**
+     * @Route("/devistp", name="devistp")
+     * @return \Symfony\Component\HttpFoundation\Response 
+     */
+    public function showTP(CommandeRepository $repository){
+      $commandes= $repository->findLastId("id");
+      dump($commandes);
+      return $this->render("front/TpConfirm.html.twig", ["commandes" => $commandes]);
+    }
+
+
+
+
     /**
      * @Route("/", name="front")
      */
@@ -43,22 +67,5 @@ class FrontController extends AbstractController
             "form" => $form->createView(),
             'commande' => $commande
         ]);
-    }
-
-      /**
-     * @Route("/choice", name="choix")
-     */
-    public function choice()
-    {
-        return $this->render('front/select.html.twig');
-    }
-
-    /**
-     * @Route ("/confirmtp", name="confirmtp")
-     */
-
-    public function tpConfirm()
-    {
-        return $this->render('front/TpConfirm');
     }
 }

@@ -67,13 +67,6 @@ class Commande
     private $Complement;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $autrefonction;
-
-
-    protected $captchaCode;
-    /**
      * @ORM\Column(type="datetime")
      */
     private $created_at;
@@ -82,6 +75,14 @@ class Commande
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
      */
     private $fonction;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $autrefonction;
+
+
+    protected $captchaCode;
 
     public function __construct()
     {

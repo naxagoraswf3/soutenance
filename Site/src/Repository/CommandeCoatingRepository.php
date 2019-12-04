@@ -19,6 +19,16 @@ class CommandeCoatingRepository extends ServiceEntityRepository
         parent::__construct($registry, CommandeCoating::class);
     }
 
+    public function findLastId(): ?CommandeCoating
+    {
+        return $this->createQueryBuilder('c')
+            ->orderBy('c.id', 'DESC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+
     // /**
     //  * @return CommandeCoating[] Returns an array of CommandeCoating objects
     //  */

@@ -31,7 +31,7 @@ class CommandeCoatingType extends AbstractType
                 "choices" => [
                     "Aqueuse"=>"Aqueuse",
                     "Solutée"=>"Solutée",
-                    "100%"=>"100%",
+                    "100% extrait sec"=>"100% extrait sec",
                     "Autre"=>"Autre"],
                 "multiple" => false
             ])
@@ -62,14 +62,7 @@ class CommandeCoatingType extends AbstractType
             ])
 
             ->add('autrefonction', HiddenType::class)
-            ->add("captchaCode", CaptchaType::class,[
-                'captchaConfig'=> 'ValidationForm',
-                'constraints' => [
-                    new ValidCaptcha([
-                        'message' => 'invalid captcha'
-                    ])
-                ]
-            ])
+            
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -77,10 +70,8 @@ class CommandeCoatingType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-            ])
-        ;
-            ;
-        ;
+            ]);
+            
     }
 
     public function configureOptions(OptionsResolver $resolver)
