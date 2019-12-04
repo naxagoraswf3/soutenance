@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+
 use App\Entity\Fonction;
 use App\Entity\CommandeCoating;
 use Symfony\Component\Form\AbstractType;
@@ -14,6 +15,8 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
+
+
 
 
 class CommandeCoatingType extends AbstractType
@@ -48,6 +51,7 @@ class CommandeCoatingType extends AbstractType
                 "expanded" => false,
                 "help" => "Cliquer pour commencer la sélection"
             ])
+
             ->add('autrefonction', HiddenType::class)
             ->add("captchaCode", CaptchaType::class,[
                 'captchaConfig'=> 'ValidationForm',
@@ -71,6 +75,7 @@ class CommandeCoatingType extends AbstractType
             
             
             ;
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

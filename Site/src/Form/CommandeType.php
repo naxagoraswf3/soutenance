@@ -17,6 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
 
+
 class CommandeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -26,6 +27,9 @@ class CommandeType extends AbstractType
             )
             ->add('Prenom', TextType::class, ["label"=> "Prénom"])
             ->add('Mail',EmailType::class, ["label"=> "Adresse mail"])
+            ->add('Nom')
+            ->add('Prenom')
+            ->add('Mail')
             ->add('Polymere')
             ->add('Methode')
             ->add('Masterbatch', ChoiceType::class, [
