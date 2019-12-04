@@ -1,11 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}{% endblock %}
-{% form_theme formcoat 'bootstrap_4_layout.html.twig' %}
-
-{% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="/css/formstyle.css" />
-{% endblock %}
 
 {% block body %}
 
@@ -13,98 +8,56 @@
 
     <main class="row h-100 w-100 m-0">
         <input type="hidden" name="form">
-        <div id="fForm" class="m-0   text-center  flex-column  " style="display: none;">
-            <h2 >Formulaire Thermoplastique</h2>
-            <div id="form1" style="display: none;">
+        <div id="fForm" class="m-0   text-center d-flex flex-column  ">
+            <h2 >dgfodruituiprèyuie(e(èu</h2>
+            <div id="form1">
                 {{ form_start(form) }}
-                    <div class="container border">
-                        <div class="row ">
-                            <div class="col-md-4">{{form_row(form.Nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
-                            <div class="col-md-4">{{form_row(form.Prenom,  {"attr" : {"placeholder":"Votre prénom"}})}}</div>
-                            <div class="col-md-4">{{form_row(form.Mail,  {"attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">{{form_row(form.Nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
+                            <div>{{form_row(form.Prenom,  {"label": "Prénom", "attr" : {"placeholder":"Votre prénom"}})}}</div>
+                            <div>{{form_row(form.Mail,  {"label": "Adresse mail", "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>
-                            <div class="col-md-12">{{form_row(form.Methode,  {"label": "Méthode de transformation", "attr" : {"placeholder":"Méthode de transformation souhaitée"}})}}</div>
-                            <div  class="col-md-12">{{form_row(form.Masterbatch ,  {"label": "Type de Masterbatch"})}}</div>
-                            <div class="col-md-12">{{form_row(form.MFI,  {"label": "MFI de la résine de base", "attr" : {"placeholder":"Indiquez l'indice de fluidité de votre résine"}})}}</div>
-                            <div class="col-md-6">{{form_row(form.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
-                            <div class="col-md-6">{{form_row(form.Quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
-                            <p class="btn btn-outline-danger col-md-3 autre" id="autre">Autre  fonction</p>
-                            <div class="col-md-6">{{form_row(form.autrefonction,  {"label": "Autre fonction", "attr" : {"placeholder":"Ajouter une fonction"}})}}</div>
-                            <div class="col-md-12">{{form_row(form.Complement ,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
-                             <div class="col-md-4 offset-4 my-2 m-auto">{{form_row(form.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
-                            <div class="col-md-6 offset-3 my-2 m-auto">{{form_row(form.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter ?"})}}</div>
-                             {# <div class="col-md-6 my-2">{{form_row(form.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
-                            <div class="col-md-6 my-2 mt-10">{{form_row(form.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter. ?", "attr" : {"class":"mt-10"}})}}</div> #}
+                            <div  class="col-md-6">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>
+                            <div>{{form_row(form.Methode,  {"label": "Méthode de transformation", "attr" : {"placeholder":"Méthode de transformation souhaitée"}})}}</div>
+                            <div  class="col-md-6">{{form_row(form.Masterbatch ,  {"label": "Type de Masterbatch"})}}</div>
+                            <div>{{form_row(form.MFI,  {"label": "MFI de la résine de base", "attr" : {"placeholder":"Indiquez l'indice de fluidité de votre résine"}})}}</div>
+                            <div>{{form_row(form.Quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+                            <div>{{form_row(form.Complement ,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+                            <div>{{form_row(form.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
                         </div>
                             {{ form_rest(form) }}
-
-
-                            {% set formErrors = form.vars.errors.form.getErrors(true) %}
-                            {% if formErrors|length %}
-                             <div class="alert alert-danger">
-                                <ul>
-                                 {% for error in formErrors %}
-                                    <li> {{ error.message }}</li>
-                                {% endfor %}        
-                                </ul>
-                                </div>   
-                                {% endif %}     
-
-                            <button class="btn btn-outline-danger">
-                                Soumettre
-                            </button>
+                        <button class="btn btn-primary">
+                            Soumettre
+                        </button>
                     </div>
                         {{ form_end(form) }}
             </div>
         </div>
-        <div id="sForm" class="m-0  text-center  flex-column " style="display: none;">
-            <h2 >Formulaire Coating</h2>
-            <div id="form2" style="display: none;">
-                <div class="container border">
-    {{ form_start(formcoat) }}
-    <div class="row">
-        <div  class="col-md-4">{{form_row(formcoat.nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
-        <div class="col-md-4">{{form_row(formcoat.prenom, {"attr" : {"placeholder":"Votre prénom"}})}}</div>
-        <div class="col-md-4">{{form_row(formcoat.mail,  { "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
-    </div>
-    <div class="row append">
-        <div class="col-md-6">{{form_row(formcoat.resine ,  {"label": "Type de résine"})}}</div>
-        <div class="col-md-6">{{form_row(formcoat.application,  {"label": "Méthode d'application", "attr" : {"placeholder":"(pistolet, sérigraphie…)"}})}}</div>
-        <div class="col-md-4 offset-2">{{form_row(formcoat.formulation, {"label": "Type de formulation"})}}</div>
-        <div class="col-md-3">{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
-        <div class="col-6 ">{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
-        <div class="col-md-6">{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
-
-        <p class="btn btn-outline-danger col-md-3 autre" id="autre2">Autre  fonction</p>
-
-        <div class="col-md-6">{{form_row(formcoat.autrefonction,  {"label": "Autre fonction", "attr" : {"placeholder":"Ajouter une fonction"}})}}</div>
-
-        <div class="col-md-12">{{form_row(formcoat.complement,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
-        <div class="col-md-4 offset-4 my-2 m-auto">{{form_row(formcoat.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
-        <div class="col-md-6 offset-3 my-2 m-auto">{{form_row(formcoat.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter. ?"})}}</div>
-
-    </div>
-        {{ form_rest(formcoat) }}
-
-        
-        {% set formErrors = formcoat.vars.errors.form.getErrors(true) %}
-        {% if formErrors|length %}
-         <div class="alert alert-danger">
-            <ul>
-             {% for error in formErrors %}
-                <li> {{ error.message }}</li>
-            {% endfor %}        
-            </ul>
-            </div>   
-            {% endif %}     
-
-
-    <button class="btn btn-outline-danger">
-        Soumettre
-    </button>
-    {{ form_end(formcoat) }}
+        <div id="sForm" class="m-0  text-center d-flex flex-column ">
+            <h2 >,fhfjghjkdtyjtdeyiofyuhidetr</h2>
+            <div id="form2">
+                {{ form_start(formcoat) }}
+                    <div class="row">
+                        <div>{{form_row(formcoat.nom,  {"label": "Nom", "attr" : {"placeholder":"Votre nom"}})}}</div>
+                        <div>{{form_row(formcoat.prenom, {"label": "Prénom", "attr" : {"placeholder":"Votre prénom"}})}}</div>
+                        <div>{{form_row(formcoat.mail,  {"label": "Adresse mail", "attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+                    </div>
+                    <div class="row">
+                        <div>{{form_row(formcoat.resine ,  {"label": "Type de résine"})}}</div>
+                        <div>{{form_row(formcoat.application,  {"label": "Méthode d'application", "attr" : {"placeholder":"(pistolet, sérigraphie…)"}})}}</div>
+                        <div>{{form_row(formcoat.formulation, {"label": "Type de formulation"})}}</div>
+                        <div>{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
+                        <div>{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+                        <div>{{form_row(formcoat.complement,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+                        <div>{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
+                    </div>
+                        {{ form_rest(formcoat) }}
+                    <button class="btn btn-primary">
+                        Soumettre
+                    </button>
+                    {{ form_end(formcoat) }}
                 
             </div>
         </div>
@@ -113,67 +66,71 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="/js/form2script.js"></script>
-    <script src="/js/formscript.js"></script>
+<script> 
 
-    <script> 
+    $('body').css('height', '100vh')
+    let form1 = $('#form1').css({'display' : 'none'});
+    let form2 = $('#form2').css({'display' : 'none'});
+    let ff = $('#fForm');
+    let sf = $('#sForm');
+    let ffh2 = $('#fForm > h2');
+    let sfh2 = $('#sForm > h2');
+    let bool = false;
 
-        $('body').css('height', '100vh')
-        let form1 = $('#form1');
-        let form2 = $('#form2');
-        let ff = $('#fForm');
-        let sf = $('#sForm');
-        let ffh2 = $('#fForm > h2');
-        let sfh2 = $('#sForm > h2');
-        setTimeout(function(){ ff.css({'display' : 'block'});
-                               sf.css({'display' : 'block'});;}, 2000);
-        ff.css({'transition' : 'all 0.75s ease-in-out','left' : '20vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
-        sf.css({'transition' : 'all .75s ease-in-out','left' : '80vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
-        ffh2.css({'transition' : 'all 0.75s ease-in-out','margin-bottom' : '5vh'});
-        sfh2.css({'transition' : 'all .75s ease-in-out','margin-bottom' : '5vh'});
-        ff.click(uneFonction);
-        sf.click(uneAutreFonction);
+    ff.css({'transition' : 'all 0.75s ease-in-out','left' : '20vw' , 'top' : '0','position' : 'absolute','transform' : 'translate(-50%)'});
+    sf.css({'transition' : 'all .75s ease-in-out','left' : '80vw' , 'top' : '0','position' : 'absolute','transform' : 'translate(-50%)'});
+    ffh2.css({'transition' : 'all 0.75s ease-in-out','margin-bottom' : '5vh'});
+    sfh2.css({'transition' : 'all .75s ease-in-out','margin-bottom' : '5vh'});
+    ff.click(uneFonction);
+    sf.click(uneAutreFonction);
 
-        function uneFonction(){
+    function uneFonction(){
+if(bool){
+    
+    bool = true
+}
+            ff.css({'left' : "50vw",
+                'transform' : 'translate(-50%)',
+                'top' : '2vh',
+            });
+            ffh2.css({
+               'transform' : ' scale(3)'
+            });
 
-                ff.css({'left' : "50vw",
-                    'transform' : 'translate(-50%)',
-                    'top' : '15vh',
-                });
-                ffh2.css({
-                   'font-size' : '8em'
-                });
+            sf.css({'left' : "90vw",
+                'top' : '25vh',
+                 
+            });
+            sfh2.css({
+                'transform' : ' scale(0.4)',
 
-                sf.css({'left' : "90vw",
-                    'top' : '30vh',
-                     
-                });
-                sfh2.css({
-                    'font-size' : '1em'
+            });
+            setTimeout(function(){ form1.css({'display' : 'block'});;}, 600);
+            form2.css({'display' : 'none'});
+            
+    }
+    function uneAutreFonction(){
 
-                });
-                setTimeout(function(){ form1.css({'display' : 'block'});;}, 600);
-                form2.css({'display' : 'none'});
-                
-        }
-        function uneAutreFonction(){
+if(bool){
 
+    bool = true
+}
 
-                sf.css({'left' : "50vw",
-                    'transform' : 'translate(-50%)',
-                    'top' : '15vh',
-                });
-                sfh2.css({'font-size' : '8em'
-                });
-                ff.css({'left' : "10vw",
-                    'top' : '30vh',
-                });
-                ffh2.css({
-                       'font-size' : '1em'
-                });
-                setTimeout(function(){ form2.css({'display' : 'block'});}, 600);
-                form1.css({'display' : 'none'});
-                
-        }
-    </script>
+            sf.css({'left' : "50vw",
+                'transform' : 'translate(-50%)',
+                'top' : '2vh',
+            });
+            sfh2.css({'transform' : ' scale(3)'
+            });
+            ff.css({'left' : "10vw",
+                'top' : '25vh',
+            });
+            ffh2.css({
+                   'transform' : ' scale(0.4)'
+            });
+            setTimeout(function(){ form2.css({'display' : 'block'});}, 600);
+            form1.css({'display' : 'none'});
+            
+    }
+</script>
 {% endblock %}

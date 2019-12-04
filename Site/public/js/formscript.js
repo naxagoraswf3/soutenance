@@ -1,7 +1,7 @@
-                let fonction2 = document.querySelector("#autre"); //#commande_coating_fonction> option 
+                let fonction = document.querySelector("#autre"); //#commande_coating_fonction> option 
 
-				console.log(fonction2);
-				fonction2.addEventListener("click",inputtext);
+				console.log(fonction);
+				fonction.addEventListener("click",inputtext);
 				function inputtext() {
 				   console.log('input');
 

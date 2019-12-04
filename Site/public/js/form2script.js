@@ -1,4 +1,4 @@
-                let fonction = document.querySelector("#autre2"); //#commande_coating_fonction> option 
+                let fonction = document.querySelector("#autre"); //#commande_coating_fonction> option 
 
 				console.log(fonction);
 				fonction.addEventListener("click",inputtext);
