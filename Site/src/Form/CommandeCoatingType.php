@@ -28,17 +28,26 @@ class CommandeCoatingType extends AbstractType
             ->add('prenom')
             ->add('mail')
             ->add('resine', ChoiceType::class, [
-                "choices" => $this->getChoices(),
+                "choices" => [
+                    "Aqueuse"=>"Aqueuse",
+                    "Solutée"=>"Solutée",
+                    "100%"=>"100%",
+                    "Autre"=>"Autre"],
                 "multiple" => false
             ])
             ->add('application')
             ->add('formulation', ChoiceType::class, [
-                "choices" => $this->getChoices2(),
+                "choices" => [
+                    "Formulation à 100%"=>"Formulation à 100%",
+                    "Slurry concentré à diluer"=>"Slurry concentré à diluer"],
                 "expanded" => true,
                 "multiple" => false
             ])
             ->add('provenance', ChoiceType::class, [
-                "choices" => $this->getChoices3(),
+                "choices" => [
+                    "Formulation dans résine fournie"=>"Formulation dans résine fournie",
+                    "Résine Naxagoras comaptible"=>"Résine Naxagoras comaptible"
+                ],
                 "expanded" => true,
                 "multiple" => false
             ])
@@ -69,11 +78,7 @@ class CommandeCoatingType extends AbstractType
                     ]),
                 ],
             ])
-
-
         ;
-            
-            
             ;
         ;
     }
@@ -83,35 +88,5 @@ class CommandeCoatingType extends AbstractType
         $resolver->setDefaults([
             'data_class' => CommandeCoating::class,
         ]);
-    }
-
-    private function getChoices(){
-        $choices = CommandeCoating::RESINE;
-        $output = [];
-        foreach ($choices as $k => $v) {
-            $output[$v] =$k;
-        }
-
-        return $output;
-    }
-
-       private function getChoices2(){
-        $choices = CommandeCoating::FORMULATION;
-        $output = [];
-        foreach ($choices as $k => $v) {
-            $output[$v] =$k;
-        }
-
-        return $output;
-    }
-
-       private function getChoices3(){
-        $choices = CommandeCoating::PROVENANCE;
-        $output = [];
-        foreach ($choices as $k => $v) {
-            $output[$v] =$k;
-        }
-
-        return $output;
     }
 }
