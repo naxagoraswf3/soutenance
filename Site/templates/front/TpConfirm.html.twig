@@ -14,7 +14,6 @@
                         <table class="table">
                             <thead class="black white-text">
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Prenom</th>
                                 <th scope="col">email</th>
@@ -22,23 +21,23 @@
                                 <th scope="col">Méthode de transformation</th>
                                 <th scope="col">Masterbatch</th>
                                 <th scope="col">MFI de la résine de base</th>
-                                <th scope="col">Fonction</th>
+
                                 <th scope="col">Quantité</th>
                                 <th scope="col">Complément d'information</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">{{ commande.nom }}</th>
-                                <th scope="col">{{ commande.prenom }}</th>
-                                <th scope="col">{{ commande.mail }}</th>
-                                <th scope="col">{{ commande.polymere }}</th>
-                                <th scope="col">{{ commande.methode }}</th>
-                                <th scope="col">{{ commande.masterbatch }}</th>
-                                <th scope="col">{{ commande.mfi }}</th>
-                                <th scope="col">{{ commande. }}</th>
-                                <th scope="col">{{ commande.quantite }}</th>
-                                <th scope="col">{{ commande.complement }}</th>
+                                <th scope="row">{{ commandes.nom }}</th>
+                                <th scope="col">{{ commandes.prenom }}</th>
+                                <th scope="col">{{ commandes.mail }}</th>
+                                <th scope="col">{{ commandes.polymere }}</th>
+                                <th scope="col">{{ commandes.methode }}</th>
+                                <th scope="col">{{ commandes.masterbatch }}</th>
+                                <th scope="col">{{ commandes.mfi }}</th>
+
+                                <th scope="col">{{ commandes.quantite }}</th>
+                                <th scope="col">{{ commandes.complement }}</th>
                             </tr>
                             </tbody>
                         </table>

@@ -5,20 +5,40 @@ namespace App\Controller;
 use App\Entity\Commande;
 use App\Entity\CommandeCoating;
 use App\Form\CommandeCoatingType;
-use App\Form\CommandeType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Doctrine\ORM\EntityManagerInterface;
-use App\Entity\Commande;
 use App\Form\CommandeType;
+use App\Repository\CommandeRepository;
 
 
 
 class FrontController extends AbstractController
 {
+
+    /**
+     * @var CommandeRepository
+     */
+    private $repository;
+    public function __construct(CommandeRepository $repository)
+    {
+      $this->repository = $repository;
+    }
+
+    /**
+     * @Route("/devistp", name="devistp")
+     * @return \Symfony\Component\HttpFoundation\Response 
+     */
+    public function showTP(CommandeRepository $repository){
+      $commandes= $repository->findLastId("id");
+      dump($commandes);
+      return $this->render("front/TpConfirm.html.twig", ["commandes" => $commandes]);
+    }
+
+
+
+
     /**
      * @Route("/", name="front")
      */
@@ -41,7 +61,7 @@ class FrontController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("form");
+            return $this->redirectToRoute("devistp");
         }
         return $this->render('front/form.html.twig', [
             "form" => $form->createView(),
@@ -49,11 +69,5 @@ class FrontController extends AbstractController
         ]);
     }
 
-      /**
-     * @Route("/choice", name="choix")
-     */
-    public function choice()
-    {
-        return $this->render('front/select.html.twig');
-    }
+
 }

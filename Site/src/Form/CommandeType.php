@@ -46,14 +46,8 @@ class CommandeType extends AbstractType
                 "help" => "Cliquer pour commencer la sélection"
             ])
             ->add('autrefonction', HiddenType::class)
-            ->add("captchaCode", CaptchaType::class,[
-                'captchaConfig'=> 'ValidationForm',
-                'constraints' => [
-                    new ValidCaptcha([
-                        'message' => 'captcha invalide'
-                    ])
-                ]
-            ])
+            
+            
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
