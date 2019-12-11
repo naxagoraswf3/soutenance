@@ -11,51 +11,50 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class FrontController extends AbstractController {
-	/**
-	 * @Route("/", name="front")
-	 */
-	public function index() {
-		return $this->render('front/index.html.twig');
-	}
 
-	/**
-	 * @Route("/form", name="form")
-	 */
-	public function newCommande(Request $request, EntityManagerInterface $manager) {
+class FrontController extends AbstractController
+{
+    /**
+     * @Route("/", name="front")
+     */
+    public function index()
+    {
+        return $this->render('front/index.html.twig');
+    }
 
-		$commande = new Commande();
+    /**
+     * @Route("/form", name="form")
+     */
+    public function newCommande(Request $request, EntityManagerInterface $manager)
+    {
+    	$commande = new Commande();
 
-		$form = $this->createForm(CommandeType::class, $commande);
-		$form->handleRequest($request);
-		if ($form->isSubmitted() && $form->isValid()) {
-			$commande->setCreatedAt(new \DateTime());
-			$manager->persist($commande);
-			$manager->flush();
+    	$form = $this->createForm(CommandeType::class,$commande);
+    	$form->handleRequest($request);
+    	if($form->isSubmitted() && $form->isValid()){
+    		$commande->setCreatedAt(new \DateTime());
+            $manager->persist($commande);
+            $manager->flush();
 
-			//return $this->redirectToRoute("form");
-		}
-		$commandeCoating = new CommandeCoating();
+            return $this->redirectToRoute("form");
+        }
+        return $this->render('front/form.html.twig', [
+            "form" => $form->createView(),
+            'commande' => $commande
+        ]);
+    }
 
-		$formCoating = $this->createForm(CommandeCoatingType::class, $commandeCoating);
-		$formCoating->handleRequest($request);
+        /**
+         * @Route("/devistp")
+         */
+        public function addFriends()
+    {
+        if (isset($_POST['add'])) {
+            $id = $_POST['id'];
+            $user = $this->getUser();
+            $user->addFriend($id);
+        }
+        return $this->redirectToRoute('friends');
+    }
 
-		if ($formCoating->isSubmitted() && $formCoating->isValid()) {
-
-			$commandeCoating->setCreatedAt(new \DateTime());
-			$manager->persist($commandeCoating);
-			$manager->flush();
-
-			return $this->redirectToRoute("form");
-		}
-		return $this->render('test.html.twig', [
-			"formcoat" => $formCoating->createView(),
-			'commandecoat' => $commandeCoating,
-			"form" => $form->createView(),
-			'commande' => $commande,
-			'controller_name' => 'FrontController',
-
-		]);
-
-	}
 }
