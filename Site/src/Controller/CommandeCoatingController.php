@@ -22,17 +22,17 @@ class CommandeCoatingController extends AbstractController
     }
 
     /**
-     * @Route("/deviscp", name="deviscp")
+     * @Route("/devisCoat", name="devisCoat")
      * @return \Symfony\Component\HttpFoundation\Response 
      */
     public function showCT(CommandeCoatingRepository $repository){
       $commandes= $repository->findLastId("id");
-      // dump($commandes);
+      dump($commandes);
       return $this->render("front/CoatingConfirm.html.twig", ["commandes" => $commandes]);
     }
 
     /**
-     * @Route("/form2", name="form2")
+     * @Route("/formCoat", name="formCoat")
      */
     public function newCommandeCoating(Request $request, EntityManagerInterface $manager)
     {
@@ -45,9 +45,9 @@ class CommandeCoatingController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("deviscp");
+            return $this->redirectToRoute("devisCoat");
         }
-        return $this->render('front/form2.html.twig', [
+        return $this->render('front/formCoat.html.twig', [
             "formcoat" => $form->createView(),
             'commandecoat' => $commande
         ]);

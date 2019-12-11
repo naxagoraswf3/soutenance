@@ -22,6 +22,7 @@ class CommandeCoatingRepository extends ServiceEntityRepository
     public function findLastId(): ?CommandeCoating
     {
         return $this->createQueryBuilder('c')
+            ->innerJoin("c.fonction", "commande_coating_fonction")
             ->orderBy('c.id', 'DESC')
             ->setMaxResults(1)
             ->getQuery()
