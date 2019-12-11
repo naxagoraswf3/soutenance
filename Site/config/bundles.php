@@ -15,7 +15,5 @@ return [
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true],
     EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle::class => ['all' => true],
     Captcha\Bundle\CaptchaBundle\CaptchaBundle::class => ['all' => true],
-    EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle::class => ['all' => true],
-    Gregwar\CaptchaBundle\GregwarCaptchaBundle::class => ['all' => true],
-    Innocead\CaptchaBundle\InnoceadCaptchaBundle::class => ['all' => true],
+
 ];

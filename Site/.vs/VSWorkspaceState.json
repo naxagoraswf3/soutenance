@@ -6,6 +6,6 @@
     "\\src\\Form",
     "\\templates"
   ],
-  "SelectedNode": "\\templates\\test.html.twig",
+  "SelectedNode": "\\src\\Entity\\CommandeCoating.php",
   "PreviewInSolutionExplorer": false
 }
