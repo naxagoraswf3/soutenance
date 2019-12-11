@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Innocead\CaptchaBundle\Validator\Constraints as CaptchaAssert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommandeRepository")
@@ -76,7 +77,7 @@ class Commande {
 	 */
 	private $autrefonction;
 
-	protected $captchaCode;
+	protected $captcha;
 
 	public function __construct() {
 		$this->fonction = new ArrayCollection();
@@ -218,12 +219,12 @@ class Commande {
 
 		return $this;
 	}
-	public function getCaptchaCode() {
-		return $this->captchaCode;
+	public function getCaptcha() {
+		return $this->captcha;
 	}
 
-	public function setCaptchaCode($captchaCode) {
-		$this->captchaCode = $captchaCode;
+	public function setCaptcha($captcha) {
+		$this->captcha = $captcha;
 
 	}
 

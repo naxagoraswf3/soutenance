@@ -54,7 +54,7 @@ class CommandeCoatingType extends AbstractType {
 
 			->add('autrefonction', HiddenType::class)
 			->add('captchaCode', CaptchaType::class, [
-				'captchaConfig' => 'formCaptcha',
+				'captchaConfig' => 'ValidationForm',
 				'constraints' => [
 					new ValidCaptcha([
 						'message' => 'invalid captcha',
