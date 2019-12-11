@@ -60,7 +60,7 @@ class Commande
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\Positive(message="Le MFI ne peut être négatif")
+     * @Assert\Positive(message="Le MFI ne peut être une valeur négative")
      * @Assert\NotBlank
      */
     private $MFI;
