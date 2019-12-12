@@ -46,7 +46,7 @@ class CommandeCoatingType extends AbstractType
             ->add('provenance', ChoiceType::class, [
                 "choices" => [
                     "Formulation dans résine fournie"=>"Formulation dans résine fournie",
-                    "Résine Naxagoras comaptible"=>"Résine Naxagoras comaptible"
+                    "Résine Naxagoras compatible"=>"Résine Naxagoras compatible"
                 ],
                 "expanded" => true,
                 "multiple" => false

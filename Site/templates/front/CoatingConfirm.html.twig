@@ -14,7 +14,6 @@
                         <table class="table">
                             <thead class="black white-text">
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Prenom</th>
                                 <th scope="col">email</th>
@@ -23,23 +22,38 @@
                                 <th scope="col">Type de formulation</th>
                                 <th scope="col">Résine fournie/Naxagoras</th>
                                 <th scope="col">Fonction(s)</th>
+                                <th scope="col">Fonction supplémentaire</th>
                                 <th scope="col">Quantité</th>
                                 <th scope="col">Complément d'information</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>{{ commandes.Nom }}</td>
+                                <td>{{ commandes.nom }}</td>
                                 <td>{{ commandes.prenom }}</td>
                                 <td>{{ commandes.mail }}</td>
                                 <td>{{ commandes.resine }}</td>
                                 <td>{{ commandes.application }}</td>
                                 <td>{{ commandes.formulation }}</td>
                                 <td>{{ commandes.provenance }}</td>
-                                <td>{{ commandes.fonction }}</td>
+                                <td>    
+                                    <ol style="list-style-type: none;">
+                                        {% for fonction in commandes.fonction %}
+                                            <li>-{{fonction}}</li>
+                                        {% endfor %}
+                                    </ol>
+                                </td>
+                                {% if commandes.autrefonction is not empty %}
+                                <td>{{ commandes.autrefonction}}</td>
+                                {% else %}
+                                <td>Pas de fonction supplémentaire</td>
+                                {% endif %}
                                 <td>{{ commandes.quantite }}</td>
+                                {% if commandes.complement is not empty%}
                                 <td>{{ commandes.complement }}</td>
+                                {% else %}
+                                <td>Pas de détails sur la commande</td>
+                                {% endif %}
                             </tr>
                             </tbody>
                         </table>

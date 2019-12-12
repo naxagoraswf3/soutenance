@@ -21,23 +21,41 @@
                                 <th scope="col">Méthode de transformation</th>
                                 <th scope="col">Masterbatch</th>
                                 <th scope="col">MFI de la résine de base</th>
-
+                                <th scope="col">Fonctions</th>
+                                <th scope="col">Fonction supplémentaire</th>
                                 <th scope="col">Quantité</th>
                                 <th scope="col">Complément d'information</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">{{ commandes.nom }}</th>
-                                <th scope="col">{{ commandes.prenom }}</th>
-                                <th scope="col">{{ commandes.mail }}</th>
-                                <th scope="col">{{ commandes.polymere }}</th>
-                                <th scope="col">{{ commandes.methode }}</th>
-                                <th scope="col">{{ commandes.masterbatch }}</th>
-                                <th scope="col">{{ commandes.mfi }}</th>
+                                <td scope="row">{{ commandes.nom }}</td>
+                                <td scope="col">{{ commandes.prenom }}</td>
+                                <td scope="col">{{ commandes.mail }}</td>
+                                <td scope="col">{{ commandes.polymere }}</td>
+                                <td scope="col">{{ commandes.methode }}</td>
+                                <td scope="col">{{ commandes.masterbatch }}</td>
+                                <td scope="col">{{ commandes.mfi }}</td>
+                                <td>    
+                                    <ol style="list-style-type: none;">
+                                        {% for fonction in commandes.fonction %}
+                                            <li>-{{fonction}}</li>
+                                        {% endfor %}
+                                    </ol>
+                                </td>                               
+                                {% if commandes.autrefonction is not empty%}
+                                <td>{{ commandes.autrefonction}}</td>
+                                {% else %}
+                                <td>Pas de fonction supplémentaire</td>
+                                {% endif %}
 
                                 <th scope="col">{{ commandes.quantite }}</th>
-                                <th scope="col">{{ commandes.complement }}</th>
+
+                                {% if commandes.complement is not empty%}
+                                <td>{{ commandes.complement }}</td>
+                                {% else %}
+                                <td>Pas de détails sur la commande</td>
+                                {% endif %}
                             </tr>
                             </tbody>
                         </table>

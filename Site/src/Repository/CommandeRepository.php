@@ -23,6 +23,7 @@ class CommandeRepository extends ServiceEntityRepository
     public function findLastId(): ?Commande
     {
         return $this->createQueryBuilder('c')
+        ->innerJoin("c.fonction", "commande_fonction")
             ->orderBy('c.id', 'DESC')
             ->setMaxResults(1)
             ->getQuery()

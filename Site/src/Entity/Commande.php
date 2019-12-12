@@ -22,42 +22,53 @@ class Commande
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $Nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $Prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Regex("/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/",
+     * message = "Votre adresse mail n'est pas valide.")
      */
     private $Mail;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $Polymere;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $Methode;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $Masterbatch;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
+     * @Assert\Positive(message="Le MFI ne peut être une valeur négative")
+     * @Assert\NotBlank
      */
     private $MFI;
 
     /**
      * @ORM\Column(type="integer")
      * @Assert\Positive(message="La quantité ne peut être négative")
+     * @Assert\NotBlank
      */
     private $Quantite;
 
@@ -73,6 +84,7 @@ class Commande
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandes")
+     * @Assert\NotBlank
      */
     private $fonction;
 

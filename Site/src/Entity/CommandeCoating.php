@@ -22,42 +22,52 @@ class CommandeCoating
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $prenom;
 
-    /**
+  /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Regex("/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/",
+     * message = "Votre adresse mail n'est pas valide.")
      */
     private $mail;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $resine;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $application;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $formulation;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $provenance;
 
     /**
      * @ORM\Column(type="integer")
      * @Assert\Positive(message="La quantité ne peut être négative")
+     * @Assert\NotBlank
      */
     private $quantite;
 
@@ -73,6 +83,7 @@ class CommandeCoating
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandeCoatings")
+     * @Assert\NotBlank
      */
     private $fonction;
 
