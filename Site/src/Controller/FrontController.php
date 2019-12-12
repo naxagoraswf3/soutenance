@@ -26,26 +26,5 @@ class FrontController extends AbstractController
         return $this->render('front/index.html.twig');
     }
 
-    /**
-     * @Route("/form", name="form")
-     */
-    public function newCommande(Request $request, EntityManagerInterface $manager)
-    {
-    	$commande = new Commande();
-
-    	$form = $this->createForm(CommandeType::class,$commande);
-    	$form->handleRequest($request);
-    	if($form->isSubmitted() && $form->isValid()){
-    		$commande->setCreatedAt(new \DateTime());
-            $manager->persist($commande);
-            $manager->flush();
-
-            return $this->redirectToRoute("pdf");
-        }
-        return $this->render('front/form.html.twig', [
-            "form" => $form->createView(),
-            'commande' => $commande
-        ]);
-    }
-
 }
+
