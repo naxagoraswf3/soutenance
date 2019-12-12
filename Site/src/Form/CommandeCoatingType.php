@@ -19,10 +19,10 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 class CommandeCoatingType extends AbstractType {
 	public function buildForm(FormBuilderInterface $builder, array $options) {
 		$builder
-			->add('Nom', TextType::class, ["label" => "Nom"]
+			->add('nom', TextType::class, ["label" => "Nom"]
 			)
-			->add('Prenom', TextType::class, ["label" => "Prénom"])
-			->add('Mail', EmailType::class, ["label" => "Adresse mail"])
+			->add('prenom', TextType::class, ["label" => "Prénom"])
+			->add('mail', EmailType::class, ["label" => "Adresse mail"])
 			->add('resine', ChoiceType::class, [
 				"choices" => $this->getChoices(),
 				"multiple" => false,
@@ -54,7 +54,7 @@ class CommandeCoatingType extends AbstractType {
 
 			->add('autrefonction', HiddenType::class)
 			->add('captchaCode', CaptchaType::class, [
-				'captchaConfig' => 'formCaptcha',
+				'captchaConfig' => 'ValidationForm',
 				'constraints' => [
 					new ValidCaptcha([
 						'message' => 'invalid captcha',

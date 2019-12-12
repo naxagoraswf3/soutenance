@@ -1,0 +1,89 @@
+ {% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="/css/formstyle.css" />
+{% endblock %}
+
+{% block body %}
+        <input type="hidden" name="form">
+        <div id="fForm" class="m-0   text-center  flex-column  " style="display: none;">
+            <h2 >Formulaire Thermoplastique</h2>
+            <div id="form1" style="display: none;">
+                <a href="/formThermo" class="btn btn-primary"> accéder au formulaire thermoplastique </a>
+            </div>
+        </div>
+        <div id="sForm" class="m-0  text-center  flex-column " style="display: none;">
+            <h2 >Formulaire Coating</h2>
+            <div id="form2" style="display: none;">
+                <a href="/formCoating" class="btn btn-primary"> accéder au formulaire coating </a>
+        </div>
+        {% endblock %}
+
+{% block javascripts %}
+    <script src="/js/form2script.js"></script>
+    <script src="/js/formscript.js"></script>
+
+    <script> 
+
+        $('body').css('height', '100vh')
+        let form1 = $('#form1');
+        let form2 = $('#form2');
+        let ff = $('#fForm');
+        let sf = $('#sForm');
+        let ffh2 = $('#fForm > h2');
+        let sfh2 = $('#sForm > h2');
+        setTimeout(function(){ ff.css({'display' : 'block'});
+                               sf.css({'display' : 'block'});;}, 2000);
+        ff.css({'transition' : 'all 0.75s ease-in-out','left' : '20vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
+        sf.css({'transition' : 'all .75s ease-in-out','left' : '80vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
+        ffh2.css({'transition' : 'all 0.75s ease-in-out','margin-bottom' : '5vh'});
+        sfh2.css({'transition' : 'all .75s ease-in-out','margin-bottom' : '5vh'});
+        ff.click(uneFonction);
+        sf.click(uneAutreFonction);
+
+        function uneFonction(){
+
+                ff.css({'left' : "50vw",
+                    'transform' : 'translate(-50%)',
+                    'top' : '15vh',
+                });
+                ffh2.css({
+                   'font-size' : '8em'
+                });
+
+                sf.css({'left' : "90vw",
+                    'top' : '30vh',
+                     
+                });
+                sfh2.css({
+                    'font-size' : '1em'
+
+                });
+                setTimeout(function(){ form1.css({'display' : 'block'});;}, 600);
+                form2.css({'display' : 'none'});
+                
+        }
+        function uneAutreFonction(){
+
+
+                sf.css({'left' : "50vw",
+                    'transform' : 'translate(-50%)',
+                    'top' : '15vh',
+                });
+                sfh2.css({'font-size' : '8em'
+                });
+                ff.css({'left' : "10vw",
+                    'top' : '30vh',
+                });
+                ffh2.css({
+                       'font-size' : '1em'
+                });
+                setTimeout(function(){ form2.css({'display' : 'block'});}, 600);
+                form1.css({'display' : 'none'});
+                
+        }
+    </script>
+{% endblock %}

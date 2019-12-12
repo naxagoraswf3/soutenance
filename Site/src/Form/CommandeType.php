@@ -19,13 +19,10 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 class CommandeType extends AbstractType {
 	public function buildForm(FormBuilderInterface $builder, array $options) {
 		$builder
-			->add('Nom', TextType::class, ["label" => "Nom"]
+			->add('nom', TextType::class, ["label" => "Nom"]
 			)
-			->add('Prenom', TextType::class, ["label" => "Prénom"])
-			->add('Mail', EmailType::class, ["label" => "Adresse mail"])
-			->add('Nom')
-			->add('Prenom')
-			->add('Mail')
+			->add('prenom', TextType::class, ["label" => "Prénom"])
+			->add('mail', EmailType::class, ["label" => "Adresse mail"])
 			->add('Polymere')
 			->add('Methode')
 			->add('Masterbatch', ChoiceType::class, [
