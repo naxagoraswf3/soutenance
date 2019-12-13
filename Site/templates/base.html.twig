@@ -40,6 +40,9 @@
             }
 
         </style>
+
+        {# CAPTCHA V3 #}
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lfcj8cUAAAAAEjq-P2YJj5HnANeOO4ql6mPYCRN"></script>
     </head>
     <body>
         <header>
@@ -114,7 +117,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/form">Demandez un devis
+                            <a class="nav-link" href="{{ path('formThermo') }}">Demandez un devis
                             </a>
                         </li>
 
@@ -147,6 +150,16 @@
 
         <script>
             $('select').select2();
+        </script>
+
+        {# CAPTCHA V3 #}
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Lfcj8cUAAAAAEjq-P2YJj5HnANeOO4ql6mPYCRN', {action: 'homepage'}).then(function(token) {
+                    // console.log(token);
+                    document.getElementById("token").value = token;
+                });
+            });
         </script>
 
         {% block javascripts %}{% endblock %}

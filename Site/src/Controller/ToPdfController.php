@@ -26,7 +26,7 @@ class ToPdfController extends AbstractController {
 		$dompdf = new Dompdf($pdfOptions);
 
 		// Retrieve the HTML generated in our twig file
-		$html = $this->renderView('front/index.html.twig', [
+		$html = $this->renderView('front/TpConfirm.html.twig', [
 			'title' => "Welcome to our PDF Test",
 		]);
 
