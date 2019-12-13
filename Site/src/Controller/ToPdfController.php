@@ -11,13 +11,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ToPdfController extends AbstractController {
 
 	/**
-	 * @Route("/pdf", name="pdf")
+	 * @Route("/pdfThermo", name="pdf")
 	 */
 	public function index() {
 		return $this->topdf();
 	}
 
-	public function topdf() {
+	public function topdf($route) {
 		// Configure Dompdf according to your needs
 		$pdfOptions = new Options();
 		$pdfOptions->set('defaultFont', 'Arial');

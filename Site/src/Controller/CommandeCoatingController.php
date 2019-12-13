@@ -36,8 +36,41 @@ class CommandeCoatingController extends AbstractController {
      */
 
     public function showDevis() {
+       // Configure Dompdf according to your needs
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
 
-        return $this->render("front/CoatingConfirm.html.twig", compact('coatingorder    <'));
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->render("front/CoatingConfirm.html.twig", compact('coatingorder    <'));
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Store PDF Binary Data
+        $output = $dompdf->output();
+
+        // In this case, we want to write the file in the public directory
+
+        // e.g /var/www/project/public/mypdf.pdf
+        $pdfFilepath = '../devis/devis.pdf';
+
+        // Write file to the desired path
+        file_put_contents($pdfFilepath, $output);
+
+        // Send some text response
+        return $this->render('front/index.html.twig');
+
+        // Send some text response
+
     }
 
     /**

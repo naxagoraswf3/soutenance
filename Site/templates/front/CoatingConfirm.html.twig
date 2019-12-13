@@ -1,60 +1,118 @@
-{% extends 'base.html.twig' %}
+       
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Confirmation de votre demande{% endblock %}</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+        <!--Iceberg Font-->
+        <link href="https://fonts.googleapis.com/css?family=Iceberg&display=swap" rel="stylesheet">
+        <!--Icône logo entreprise-->
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.naxagoras-technology.fr/wp-content/uploads/2019/02/naxagoras.png" />
+        <!--CDN pour multi-select-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css">
+        {% block stylesheets %}{% endblock %}
+        <style>
+            body{
+                font-family: 'Iceberg' , cursive;
+            }
+            .nav-link{
+                font-size: 1.3rem;
+            }
 
-{% block title %}Confirmation de votre demande{% endblock %}
+            .dropdown-item{
+                font-size: 1rem;
+            }
 
-{% block body %}
+            nav{
+                height: 5em;
+            }
+
+            #logo{
+                max-height:4.5em;
+            }
+
+        </style>
+
+        {# CAPTCHA V3 #}
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lfcj8cUAAAAAEjq-P2YJj5HnANeOO4ql6mPYCRN"></script>
+    </head>
+    <body>
+      
+ {% block body %}
 
 
-
+ <h1>devis Coating</h1>
     <main class="mt-5 pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <table class="table">
-                            <thead class="black white-text">
-                            <tr>
-                                <th scope="col">Nom</th>
-                                <th scope="col">Prenom</th>
-                                <th scope="col">email</th>
-                                <th scope="col">Type de résine</th>
-                                <th scope="col">Méthode d'application</th>
-                                <th scope="col">Type de formulation</th>
-                                <th scope="col">Résine fournie/Naxagoras</th>
-                                <th scope="col">Fonction(s)</th>
-                                <th scope="col">Fonction supplémentaire</th>
-                                <th scope="col">Quantité</th>
-                                <th scope="col">Complément d'information</th>
-                            </tr>
-                            </thead>
                             <tbody>
-                            <tr>
-                                <td>{{ commandes.nom }}</td>
-                                <td>{{ commandes.prenom }}</td>
-                                <td>{{ commandes.mail }}</td>
-                                <td>{{ commandes.resine }}</td>
-                                <td>{{ commandes.application }}</td>
-                                <td>{{ commandes.formulation }}</td>
-                                <td>{{ commandes.provenance }}</td>
-                                <td>    
-                                    <ol style="list-style-type: none;">
-                                        {% for fonction in commandes.fonction %}
-                                            <li class="mx-1">-{{fonction}}</li>
-                                        {% endfor %}
-                                    </ol>
-                                </td>
-                                {% if commandes.autrefonction is not empty %}
-                                <td>{{ commandes.autrefonction}}</td>
-                                {% else %}
-                                <td>Pas de fonction supplémentaire</td>
-                                {% endif %}
-                                <td>{{ commandes.quantite }}</td>
-                                {% if commandes.complement is not empty%}
-                                <td>{{ commandes.complement }}</td>
-                                {% else %}
-                                <td>Pas de détails sur la commande</td>
-                                {% endif %}
-                            </tr>
+                                <tr>
+                                    <td>Nom</td>
+                                    <td>{{ commandes.nom }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Prenom</td>
+                                    <td>{{ commandes.prenom }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>{{ commandes.mail }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Type de résine</td>
+                                    <td>{{ commandes.resine }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Méthode d'application</td>
+                                    <td>{{ commandes.application }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Type de formulation</td>
+                                    <td>{{ commandes.formulation }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Résine fournie/Naxagoras</td>
+                                    <td>{{ commandes.provenance }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Fonction(s)</td>
+                                    <td> <ol style="list-style-type: none;">
+                                            {% for fonction in commandes.fonction %}
+                                                <li class="mx-1">-{{fonction}}</li>
+                                            {% endfor %}
+                                        </ol>
+                                    </td>        
+                                </tr>
+                                <tr>
+                                    <td>Fonction supplémentaire</td>
+                                    {% if commandes.autrefonction is not empty %}
+                                    <td>{{ commandes.autrefonction}}</td>
+                                    {% else %}
+                                    <td>Pas de fonction supplémentaire</td>
+                                    {% endif %}       
+                                </tr>
+                                <tr>
+                                    <td>Quantité</td>
+                                    <td>{{ commandes.quantite }}</td>        
+                                </tr>
+                                <tr>
+                                    <td>Complément d'information</td>
+                                    {% if commandes.complement is not empty%}
+                                    <td>{{ commandes.complement }}</td>
+                                    {% else %}
+                                    <td>Pas de détails sur la commande</td>
+                                    {% endif %}        
+                                </tr>
+                            
                             </tbody>
                         </table>
                     </div>
@@ -64,3 +122,38 @@
     </main>
 
 {% endblock %}
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+
+        <script>
+            $('select').select2();
+        </script>
+
+        {# CAPTCHA V3 #}
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Lfcj8cUAAAAAEjq-P2YJj5HnANeOO4ql6mPYCRN', {action: 'homepage'}).then(function(token) {
+                    // console.log(token);
+                    document.getElementById("token").value = token;
+                });
+            });
+        </script>
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>
+
+
+
+
+
