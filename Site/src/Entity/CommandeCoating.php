@@ -10,9 +10,21 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommandeCoatingRepository")
  */
-class CommandeCoating
-{
+class CommandeCoating {
 
+    const RESINE = [
+        0 => "Aqueuse",
+        1 => "Solutée",
+        2 => "100%",
+        3 => "Autre"];
+
+    const FORMULATION = [
+        0 => "Formulation à 100%",
+        1 => "Slurry concentré à diluer"];
+
+    const PROVENANCE = [
+        0 => "Formulation dans résine fournie",
+        1 => "Résine Naxagoras compatible"];
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -22,52 +34,42 @@ class CommandeCoating
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
      */
     private $prenom;
 
-  /**
+    /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Regex("/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/",
-     * message = "Votre adresse mail n'est pas valide.")
      */
     private $mail;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer")
      */
     private $resine;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
      */
     private $application;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer")
      */
     private $formulation;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer")
      */
     private $provenance;
 
     /**
      * @ORM\Column(type="integer")
      * @Assert\Positive(message="La quantité ne peut être négative")
-     * @Assert\NotBlank
      */
     private $quantite;
 
@@ -83,7 +85,6 @@ class CommandeCoating
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandeCoatings")
-     * @Assert\NotBlank
      */
     private $fonction;
 
@@ -92,134 +93,111 @@ class CommandeCoating
      */
     private $autrefonction;
 
-    protected $captchaCode;
+    private $captchaCode;
 
-
-    public function __construct()
-    {
+    public function __construct() {
         $this->fonction = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
+    public function getId():  ? int {
         return $this->id;
     }
 
-    public function getNom(): ?string
-    {
+    public function getNom() :  ? string {
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
-    {
+    public function setNom(string $nom) : self{
         $this->nom = $nom;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
-    {
+    public function getPrenom():  ? string {
         return $this->prenom;
     }
 
-    public function setPrenom(string $prenom): self
-    {
+    public function setPrenom(string $prenom) : self{
         $this->prenom = $prenom;
 
         return $this;
     }
 
-    public function getMail(): ?string
-    {
+    public function getMail():  ? string {
         return $this->mail;
     }
 
-    public function setMail(string $mail): self
-    {
+    public function setMail(string $mail) : self{
         $this->mail = $mail;
 
         return $this;
     }
 
-    public function getResine(): ?string
-    {
+    public function getResine():  ? int {
         return $this->resine;
     }
 
-    public function setResine(string $resine): self
-    {
+    public function setResine(int $resine) : self{
         $this->resine = $resine;
 
         return $this;
     }
 
-    public function getApplication(): ?string
-    {
+    public function getApplication():  ? string {
         return $this->application;
     }
 
-    public function setApplication(string $application): self
-    {
+    public function setApplication(string $application) : self{
         $this->application = $application;
 
         return $this;
     }
 
-    public function getFormulation(): ?string
-    {
+    public function getFormulation():  ? int {
         return $this->formulation;
     }
 
-    public function setFormulation(string $formulation): self
-    {
+    public function setFormulation(int $formulation) : self{
         $this->formulation = $formulation;
 
         return $this;
     }
 
-    public function getProvenance(): ?string
-    {
+    public function getProvenance():  ? int {
         return $this->provenance;
     }
 
-    public function setProvenance(string $provenance): self
-    {
+    public function setProvenance(int $provenance) : self{
         $this->provenance = $provenance;
 
         return $this;
     }
 
-    public function getQuantite(): ?int
-    {
+    public function getQuantite():  ? int {
         return $this->quantite;
     }
 
-    public function setQuantite(int $quantite): self
-    {
+    public function setQuantite(int $quantite) : self{
         $this->quantite = $quantite;
 
         return $this;
     }
 
-    public function getComplement(): ?string
-    {
+    public function getComplement():  ? string {
         return $this->complement;
     }
 
-    public function setComplement(string $complement): self
-    {
+    public function setComplement(string $complement) : self{
         $this->complement = $complement;
 
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
+    public function getCreatedAt():  ? \DateTimeInterface {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
-    {
+    public function setCreatedAt(\DateTimeInterface $created_at) : self{
         $this->created_at = $created_at;
 
         return $this;
@@ -228,13 +206,11 @@ class CommandeCoating
     /**
      * @return Collection|fonction[]
      */
-    public function getFonction(): Collection
-    {
+    public function getFonction(): Collection {
         return $this->fonction;
     }
 
-    public function addFonction(Fonction $fonction): self
-    {
+    public function addFonction(Fonction $fonction): self {
         if (!$this->fonction->contains($fonction)) {
             $this->fonction[] = $fonction;
         }
@@ -242,8 +218,7 @@ class CommandeCoating
         return $this;
     }
 
-    public function removeFonction(Fonction $fonction): self
-    {
+    public function removeFonction(Fonction $fonction): self {
         if ($this->fonction->contains($fonction)) {
             $this->fonction->removeElement($fonction);
         }
@@ -251,30 +226,25 @@ class CommandeCoating
         return $this;
     }
 
-    public function getAutrefonction(): ?string
-    {
+    public function getAutrefonction():  ? string {
         return $this->autrefonction;
     }
 
-    public function setAutrefonction(?string $autrefonction): self
-    {
+    public function setAutrefonction( ? string $autrefonction) : self{
         $this->autrefonction = $autrefonction;
 
         return $this;
     }
-
-    public function getCaptchaCode()
-    {
+    public function getCaptchaCode() {
         return $this->captchaCode;
     }
 
-    public function setCaptchaCode($captchaCode)
-    {
+    public function setCaptchaCode($captchaCode) {
         $this->captchaCode = $captchaCode;
 
     }
 
-    public function __toString(){
+    public function __toString() {
         return $this->nom;
     }
 }

@@ -47,7 +47,7 @@ class FrontController extends AbstractController {
 
             return $this->redirectToRoute("form");
         }
-        return $this->render('front/form2.html.twig', [
+        return $this->render('front/formCoat.html.twig', [
             "formcoat" => $formCoating->createView(),
             'commandecoat' => $commandeCoating,
             'controller_name' => 'FrontController',
@@ -71,7 +71,7 @@ class FrontController extends AbstractController {
 
             return $this->redirectToRoute("form");
         }
-        return $this->render('front/form.html.twig', [
+        return $this->render('front/formThermo.html.twig', [
             "form" => $form->createView(),
             'commande' => $commande,
             'controller_name' => 'FrontController',
