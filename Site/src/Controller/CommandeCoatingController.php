@@ -31,7 +31,7 @@ class CommandeCoatingController extends AbstractController {
             'commandecoat' => $commande,
         ]);
     }
-    /
+    /**
      * @Route ("/CoatingConfirm", name="deviscoating")
      */
 

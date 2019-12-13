@@ -98,7 +98,7 @@ class CommandeCoatingType extends AbstractType {
 		}
 
 		return $output;
-	}²²²²²²²²²²
+	}
 
 	private function getChoices3() {
 		$choices = CommandeCoating::PROVENANCE;
