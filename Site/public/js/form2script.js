@@ -1,14 +1,14 @@
-                let fonction = document.querySelector("#autre"); //#commande_coating_fonction> option 
+                let fonction2 = $("#autre2"); //#commande_coating_fonction> option 
 
-				console.log(fonction);
-				fonction.addEventListener("click",inputtext);
-				function inputtext() {
-				   console.log('input');
+				console.log(fonction2);
+				fonction2.click(inputtext2);
+				function inputtext2() {
+				   console.log('test');
 
 
-				  let input = document.querySelector("#commande_coating_autrefonction");
-                   input.setAttribute('type', 'text');
-                   input.setAttribute('class', 'form-control');
+				  let input2 = document.querySelector("#commande_coating_autrefonction");
+                   input2.setAttribute('type', 'text');
+                   input2.setAttribute('class', 'form-control');
                 }
 
 
