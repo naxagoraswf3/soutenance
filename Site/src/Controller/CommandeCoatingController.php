@@ -4,10 +4,11 @@ namespace App\Controller;
 
 use App\Entity\CommandeCoating;
 use App\Form\CommandeCoatingType;
+use Symfony\Component\Mime\Email;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CommandeCoatingController extends AbstractController {
 	/**
@@ -23,6 +24,9 @@ class CommandeCoatingController extends AbstractController {
 			$commande->setCreatedAt(new \DateTime());
 			$manager->persist($commande);
 			$manager->flush();
+
+
+
 
 			return $this->redirectToRoute("form");
 		}
