@@ -36,12 +36,39 @@ class FrontController extends AbstractController
     		$commande->setCreatedAt(new \DateTime());
             $manager->persist($commande);
             $manager->flush();
-
             return $this->redirectToRoute("form");
+        
+        
+        
+        
+        
+
+
+         ////////////// CAPTCHA V3  		
+		$url = "https://www.google.com/recaptcha/api/siteverify";
+		$data = [
+			'secret' => "6Lfcj8cUAAAAAJH7eVqz31CzmjcE049pNr8CLKKx",
+			'response' => $_POST['token'],
+			// 'remoteip' => $_SERVER['REMOTE_ADDR']
+		];
+
+		$options = array(
+		    'http' => array(
+		      'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+		      'method'  => 'POST',
+		      'content' => http_build_query($data)
+		    )
+		  );
+
+		$context  = stream_context_create($options);
+  	$response = file_get_contents($url, false, $context);
+
+       
+        
         }
         return $this->render('front/form.html.twig', [
             "form" => $form->createView(),
-            'commande' => $commande
+            'commande' => $commande,
         ]);
     }
 
