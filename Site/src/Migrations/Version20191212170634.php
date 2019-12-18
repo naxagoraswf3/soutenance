@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20191203144139 extends AbstractMigration
+final class Version20191212170634 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,9 +22,9 @@ final class Version20191203144139 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE commande (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, prenom VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL, polymere VARCHAR(255) NOT NULL, methode VARCHAR(255) NOT NULL, masterbatch VARCHAR(255) NOT NULL, mfi VARCHAR(255) NOT NULL, quantite INT NOT NULL, complement LONGTEXT DEFAULT NULL, created_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE commande (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, prenom VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL, polymere VARCHAR(255) NOT NULL, methode VARCHAR(255) NOT NULL, masterbatch INT NOT NULL, mfi VARCHAR(255) NOT NULL, quantite INT NOT NULL, complement VARCHAR(255) NOT NULL, autrefonction LONGTEXT DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE commande_fonction (commande_id INT NOT NULL, fonction_id INT NOT NULL, INDEX IDX_DF20CD2782EA2E54 (commande_id), INDEX IDX_DF20CD2757889920 (fonction_id), PRIMARY KEY(commande_id, fonction_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE commande_coating (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, prenom VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL, resine VARCHAR(255) NOT NULL, application VARCHAR(255) NOT NULL, formulation VARCHAR(255) NOT NULL, provenance VARCHAR(255) NOT NULL, quantite INT NOT NULL, complement LONGTEXT DEFAULT NULL, created_at DATETIME NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE commande_coating (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, prenom VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL, resine INT NOT NULL, application VARCHAR(255) NOT NULL, formulation INT NOT NULL, provenance INT NOT NULL, quantite INT NOT NULL, complement LONGTEXT DEFAULT NULL, created_at DATETIME NOT NULL, autrefonction LONGTEXT DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE commande_coating_fonction (commande_coating_id INT NOT NULL, fonction_id INT NOT NULL, INDEX IDX_2FD80991F02CA5AD (commande_coating_id), INDEX IDX_2FD8099157889920 (fonction_id), PRIMARY KEY(commande_coating_id, fonction_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('CREATE TABLE fonction (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, visible TINYINT(1) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('ALTER TABLE commande_fonction ADD CONSTRAINT FK_DF20CD2782EA2E54 FOREIGN KEY (commande_id) REFERENCES commande (id) ON DELETE CASCADE');

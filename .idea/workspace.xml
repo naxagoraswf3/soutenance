@@ -2,10 +2,115 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37364a2c-fb34-40c2-b640-8d70d2e0545c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/2b9891aa9d8c6d946e9e1387733eff76" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/523473673dd4e4135b410333987c3ce3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/79227990fbc7b7013a862651bf4b734c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/c4e727672138e18ffe50271924bddef6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/c6cdbda72ee86a44994fe5f88c4a84d7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/.phpintel/index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/devis/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/datatables-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/directives.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/flag.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/jquery.zmd.hierarchical-display.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/addons/rating.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/mdb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/modules/animations-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/font/roboto/Roboto-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/mdb-favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/overlays/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/svg/arrow_left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/img/svg/arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/datatables-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/datatables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/directives.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/flag.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/imagesloaded.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/jquery.zmd.hierarchical-display.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/masonry.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/addons/rating.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/mdb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/animations-extended.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/forms-free.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/scrolling-navbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/treeview.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/modules/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/MDB-Free/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/blabla.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/mypdf.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/test.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/testdevis.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/public/testdevis.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Controller/ToPdfController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Migrations/Version20191128141722.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/src/Migrations/Version20191203091816.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/form/CoatingConfirm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/form/TpConfirm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/front/select.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/test.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Site/templates/to_pdf/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Site/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Site/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/CommandeCoatingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/CommandeCoating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Entity/Fonction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Form/CommandeCoatingType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Form/CommandeCoatingType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Form/CommandeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Form/CommandeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Repository/CommandeCoatingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Site/src/Repository/ContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Site/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/form2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/form2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/front/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +278,7 @@
       <workItem from="1574937762685" duration="10671000" />
       <workItem from="1575015347941" duration="7872000" />
       <workItem from="1575274027742" duration="17955000" />
-      <workItem from="1575361440427" duration="13143000" />
+      <workItem from="1575361440427" duration="12776000" />
     </task>
     <servers />
   </component>

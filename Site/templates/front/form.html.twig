@@ -9,9 +9,9 @@
 {{ form_start(form) }}
 <div class="container border">
 	<div class="row ">
-		<div class="col-12 col-md-4">{{form_row(form.Nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
-		<div class="col-12 col-md-4">{{form_row(form.Prenom,  {"attr" : {"placeholder":"Votre prénom"}})}}</div>
-		<div class="col-12 col-md-4">{{form_row(form.Mail,  {"attr" : {"placeholder":"Votre adresse mail"}})}}</div>
+		<div class="col-md-4">{{form_row(form.nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
+		<div class="col-md-4">{{form_row(form.prenom,  {"attr" : {"placeholder":"Votre prénom"}})}}</div>
+		<div class="col-md-4">{{form_row(form.mail,  {"attr" : {"placeholder":"Votre adresse mail"}})}}</div>
 	</div>
 	<div class="row">
 		<div class="col-12 col-md-12">{{form_row(form.Polymere,  {"label": "Type de polymère", "attr" : {"placeholder":"Indoquez votre type de polymère"}})}}</div>

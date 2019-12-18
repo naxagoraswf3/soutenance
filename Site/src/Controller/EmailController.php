@@ -33,11 +33,11 @@ class EmailController extends AbstractController
      */
     public function index(Request $request, MailerInterface $mailer)
     {
-        $form = $this->createForm(ContactType::class);
-        $form->handleRequest($request);
+       // $form = $this->createForm(ContactType::class);
+       // $form->handleRequest($request);
 
 
-        if ($form->isSubmitted() && $form->isValid()) {
+       // if ($form->isSubmitted() && $form->isValid()) {
 
 
             $email = (new Email())
@@ -56,13 +56,13 @@ class EmailController extends AbstractController
         $mailer->send($email);
         $this->addFlash('success', 'Message Envoyé');
 
-        return $this->redirectToRoute('contact');
-        }
+        //return $this->redirectToRoute('contact');
+       // }
 
 
 
         return $this->render('email/index.html.twig', [
-            'form' => $form->createView(),
+           // 'form' => $form->createView(),
         ]);
     }
 }

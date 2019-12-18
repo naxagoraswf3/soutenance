@@ -10,260 +10,241 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommandeCoatingRepository")
  */
-class CommandeCoating
-{
+class CommandeCoating {
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+	const RESINE = [
+		0 => "Aqueuse",
+		1 => "Solutée",
+		2 => "100%",
+		3 => "Autre"];
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $nom;
+	const FORMULATION = [
+		0 => "Formulation à 100%",
+		1 => "Slurry concentré à diluer"];
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $prenom;
+	const PROVENANCE = [
+		0 => "Formulation dans résine fournie",
+		1 => "Résine Naxagoras compatible"];
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 */
+	private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $mail;
+	/**
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $nom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $resine;
+	/**
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $prenom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $application;
+	/**
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $mail;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $formulation;
+	/**
+	 * @ORM\Column(type="integer")
+	 */
+	private $resine;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $provenance;
+	/**
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $application;
 
-    /**
-     * @ORM\Column(type="integer")
-     * @Assert\Positive(message="La quantité ne peut être négative")
-     */
-    private $quantite;
+	/**
+	 * @ORM\Column(type="integer")
+	 */
+	private $formulation;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $complement;
+	/**
+	 * @ORM\Column(type="integer")
+	 */
+	private $provenance;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $created_at;
+	/**
+	 * @ORM\Column(type="integer")
+	 * @Assert\Positive(message="La quantité ne peut être négative")
+	 */
+	private $quantite;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandeCoatings")
-     */
-    private $fonction;
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $complement;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $autrefonction;
+	/**
+	 * @ORM\Column(type="datetime")
+	 */
+	private $created_at;
 
-    protected $captchaCode;
+	/**
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Fonction", inversedBy="commandeCoatings")
+	 */
+	private $fonction;
 
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $autrefonction;
 
-    public function __construct()
-    {
-        $this->fonction = new ArrayCollection();
-    }
+	private $captchaCode;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	public function __construct() {
+		$this->fonction = new ArrayCollection();
+	}
 
-    public function getNom(): ?string
-    {
-        return $this->nom;
-    }
+	public function getId():  ? int {
+		return $this->id;
+	}
 
-    public function setNom(string $nom): self
-    {
-        $this->nom = $nom;
+	public function getNom() :  ? string {
+		return $this->nom;
+	}
 
-        return $this;
-    }
+	public function setNom(string $nom) : self{
+		$this->nom = $nom;
 
-    public function getPrenom(): ?string
-    {
-        return $this->prenom;
-    }
+		return $this;
+	}
 
-    public function setPrenom(string $prenom): self
-    {
-        $this->prenom = $prenom;
+	public function getPrenom():  ? string {
+		return $this->prenom;
+	}
 
-        return $this;
-    }
+	public function setPrenom(string $prenom) : self{
+		$this->prenom = $prenom;
 
-    public function getMail(): ?string
-    {
-        return $this->mail;
-    }
+		return $this;
+	}
 
-    public function setMail(string $mail): self
-    {
-        $this->mail = $mail;
+	public function getMail():  ? string {
+		return $this->mail;
+	}
 
-        return $this;
-    }
+	public function setMail(string $mail) : self{
+		$this->mail = $mail;
 
-    public function getResine(): ?string
-    {
-        return $this->resine;
-    }
+		return $this;
+	}
 
-    public function setResine(string $resine): self
-    {
-        $this->resine = $resine;
+	public function getResine():  ? int {
+		return $this->resine;
+	}
 
-        return $this;
-    }
+	public function setResine(int $resine) : self{
+		$this->resine = $resine;
 
-    public function getApplication(): ?string
-    {
-        return $this->application;
-    }
+		return $this;
+	}
 
-    public function setApplication(string $application): self
-    {
-        $this->application = $application;
+	public function getApplication():  ? string {
+		return $this->application;
+	}
 
-        return $this;
-    }
+	public function setApplication(string $application) : self{
+		$this->application = $application;
 
-    public function getFormulation(): ?string
-    {
-        return $this->formulation;
-    }
+		return $this;
+	}
 
-    public function setFormulation(string $formulation): self
-    {
-        $this->formulation = $formulation;
+	public function getFormulation():  ? int {
+		return $this->formulation;
+	}
 
-        return $this;
-    }
+	public function setFormulation(int $formulation) : self{
+		$this->formulation = $formulation;
 
-    public function getProvenance(): ?string
-    {
-        return $this->provenance;
-    }
+		return $this;
+	}
 
-    public function setProvenance(string $provenance): self
-    {
-        $this->provenance = $provenance;
+	public function getProvenance():  ? int {
+		return $this->provenance;
+	}
 
-        return $this;
-    }
+	public function setProvenance(int $provenance) : self{
+		$this->provenance = $provenance;
 
-    public function getQuantite(): ?int
-    {
-        return $this->quantite;
-    }
+		return $this;
+	}
 
-    public function setQuantite(int $quantite): self
-    {
-        $this->quantite = $quantite;
+	public function getQuantite():  ? int {
+		return $this->quantite;
+	}
 
-        return $this;
-    }
+	public function setQuantite(int $quantite) : self{
+		$this->quantite = $quantite;
 
-    public function getComplement(): ?string
-    {
-        return $this->complement;
-    }
+		return $this;
+	}
 
-    public function setComplement(string $complement): self
-    {
-        $this->complement = $complement;
+	public function getComplement():  ? string {
+		return $this->complement;
+	}
 
-        return $this;
-    }
+	public function setComplement(string $complement) : self{
+		$this->complement = $complement;
 
-    public function getCreatedAt(): ?\DateTimeInterface
-    {
-        return $this->created_at;
-    }
+		return $this;
+	}
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
-    {
-        $this->created_at = $created_at;
+	public function getCreatedAt():  ? \DateTimeInterface {
+		return $this->created_at;
+	}
 
-        return $this;
-    }
+	public function setCreatedAt(\DateTimeInterface $created_at) : self{
+		$this->created_at = $created_at;
 
-    /**
-     * @return Collection|fonction[]
-     */
-    public function getFonction(): Collection
-    {
-        return $this->fonction;
-    }
+		return $this;
+	}
 
-    public function addFonction(Fonction $fonction): self
-    {
-        if (!$this->fonction->contains($fonction)) {
-            $this->fonction[] = $fonction;
-        }
+	/**
+	 * @return Collection|fonction[]
+	 */
+	public function getFonction(): Collection {
+		return $this->fonction;
+	}
 
-        return $this;
-    }
+	public function addFonction(Fonction $fonction): self {
+		if (!$this->fonction->contains($fonction)) {
+			$this->fonction[] = $fonction;
+		}
 
-    public function removeFonction(Fonction $fonction): self
-    {
-        if ($this->fonction->contains($fonction)) {
-            $this->fonction->removeElement($fonction);
-        }
+		return $this;
+	}
 
-        return $this;
-    }
+	public function removeFonction(Fonction $fonction): self {
+		if ($this->fonction->contains($fonction)) {
+			$this->fonction->removeElement($fonction);
+		}
 
-    public function getAutrefonction(): ?string
-    {
-        return $this->autrefonction;
-    }
+		return $this;
+	}
 
-    public function setAutrefonction(?string $autrefonction): self
-    {
-        $this->autrefonction = $autrefonction;
+	public function getAutrefonction():  ? string {
+		return $this->autrefonction;
+	}
 
-        return $this;
-    }
+	public function setAutrefonction( ? string $autrefonction) : self{
+		$this->autrefonction = $autrefonction;
 
-    public function getCaptchaCode()
-    {
-        return $this->captchaCode;
-    }
+		return $this;
+	}
+	public function getCaptchaCode() {
+		return $this->captchaCode;
+	}
 
-    public function setCaptchaCode($captchaCode)
-    {
-        $this->captchaCode = $captchaCode;
+	public function setCaptchaCode($captchaCode) {
+		$this->captchaCode = $captchaCode;
 
-    }
+	}
 
-    public function __toString(){
-        return $this->nom;
-    }
+	public function __toString() {
+		return $this->nom;
+	}
 }
