@@ -29,23 +29,26 @@
     <script> 
 
         $('body').css('height', '100vh')
-        let form1 = $('#form1');
-        let form2 = $('#form2');
-        let ff = $('#fForm');
-        let sf = $('#sForm');
-        let ffh2 = $('#fForm > h2');
-        let sfh2 = $('#sForm > h2');
+        let form1 = $('#form1');//recuperation de la DIV form1 et stockage dans une variable pour la réutiliser plus tard
+        let form2 = $('#form2');//recuperation de la DIV form2 et stockage dans une variable pour la réutiliser plus tard
+        let ff = $('#fForm');//recuperation de la DIV fForm  et stockage dans une variable pour la réutiliser plus tard
+        let sf = $('#sForm');//recuperation de la DIV sForm et stockage dans une variable pour la réutiliser plus tard
+        let ffh2 = $('#fForm > h2');//recuperation du h2 de fForm et stockage dans une variable pour la réutiliser plus tard
+        let sfh2 = $('#sForm > h2');//recuperation du h2 de sForm et stockage dans une variable pour la réutiliser plus tard
         setTimeout(function(){ ff.css({'display' : 'block'});
-                               sf.css({'display' : 'block'});;}, 2000);
+                               sf.css({'display' : 'block'});;}, 2000);// permet de tarder l'affichage des div affin de ne plus avoir de problème d'affichage lors du chargement
+        // ajout des transition et positionement des elements
         ff.css({'transition' : 'all 0.75s ease-in-out','left' : '20vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
         sf.css({'transition' : 'all .75s ease-in-out','left' : '80vw' , 'top' : '40vh','position' : 'absolute','transform' : 'translate(-50%)'});
         ffh2.css({'transition' : 'all 0.75s ease-in-out','margin-bottom' : '5vh'});
         sfh2.css({'transition' : 'all .75s ease-in-out','margin-bottom' : '5vh'});
+        // Création des event listener , cliquer sur un element
         ff.click(uneFonction);
         sf.click(uneAutreFonction);
 
+        // animation du clique sur la 1er div ( formulaire thermoplastique)
         function uneFonction(){
-
+            //modification du css( possition et taille)
                 ff.css({'left' : "50vw",
                     'transform' : 'translate(-50%)',
                     'top' : '15vh',
@@ -62,13 +65,15 @@
                     'font-size' : '1em'
 
                 });
+                //retarde l'affichage du contenu (bouton), et cache l'ancien contenue afficher
                 setTimeout(function(){ form1.css({'display' : 'block'});;}, 600);
                 form2.css({'display' : 'none'});
                 
         }
+        // animation du clique sur la 1er div ( formulaire coating)
         function uneAutreFonction(){
 
-
+            //modification du css( possition et taille)
                 sf.css({'left' : "50vw",
                     'transform' : 'translate(-50%)',
                     'top' : '15vh',
@@ -81,6 +86,7 @@
                 ffh2.css({
                        'font-size' : '1em'
                 });
+                //retarde l'affichage du contenu (bouton), et cache l'ancien contenue afficher
                 setTimeout(function(){ form2.css({'display' : 'block'});}, 600);
                 form1.css({'display' : 'none'});
                 
