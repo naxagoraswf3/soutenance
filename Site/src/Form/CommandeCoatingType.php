@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 
 
@@ -54,7 +55,11 @@ class CommandeCoatingType extends AbstractType
                 "expanded" => true,
                 "multiple" => false
             ])
-            ->add('quantite')
+            ->add('quantite', IntegerType::class,[
+                "attr"=>[
+                "min" =>0
+                ],
+            ])
             ->add('complement')
             ->add('fonction', EntityType::class,[
                  // on appelle ici l'entité fonction, dans laquelle les informations rentrées s'afficheront dans une liste déroulante

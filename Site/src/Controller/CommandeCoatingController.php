@@ -29,7 +29,7 @@ class CommandeCoatingController extends AbstractController
       $commandes= $repository->findLastId("id");
       // dump($commandes);
       return $this->render("front/CoatingConfirm.html.twig", ["commandes" => $commandes]);
-    }
+    } // le contenu de la variable sera la réponse de la fonction de notre repository
 
 
     // l'annotation permet de définir la route http où sera affichée notre page
@@ -53,7 +53,7 @@ class CommandeCoatingController extends AbstractController
             return $this->redirectToRoute("devisCoat"); // une fois le formulaire envoyé, l'utilisateur sera redirigé sur cette route http
         }
         return $this->render('front/formCoat.html.twig', [ // la route http affichera le fichier twig correspondant à l'adresse en paramètre du render
-            "formcoat" => $form->createView(), // ce paramètre est une variable qui servira à twig pour son affichage
+            "formcoat" => $form->createView(), // ce paramètre est une variable qui servira à twig pour l'affichage du formulaire
         ]);
     }
 }

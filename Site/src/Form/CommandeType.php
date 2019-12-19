@@ -16,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 
 class CommandeType extends AbstractType
@@ -38,8 +39,16 @@ class CommandeType extends AbstractType
                 "expanded" => true, // ce paramètre fait que l'on passe d'une liste déroulante à deux cases à cocher
                 "multiple" => false // ce paramètre indique que seulement un seul choix est possible
             ])
-            ->add('MFI')
-            ->add('Quantite')
+            ->add('MFI', IntegerType::class,[
+                "attr"=>[
+                "min" =>0
+                ],
+            ])
+            ->add('Quantite', IntegerType::class,[
+                "attr"=>[
+                "min" =>0
+                ],
+            ])
             ->add('Complement')
             ->add('fonction', EntityType::class,[
                 // on appelle ici l'entité fonction, dans laquelle les informations rentrées s'afficheront dans une liste déroulante
