@@ -42,13 +42,14 @@ class FrontController extends AbstractController {
 
         if ($formCoating->isSubmitted() && $formCoating->isValid()) {
 
+
             $commandeCoating->setCreatedAt(new \DateTime());
             $manager->persist($commandeCoating);
             $manager->flush();
 
 
             $email = (new Email()) //creation de la class email
-            ->from('client@email.com')
+            ->from($commandeCoating->Getmail())
             ->to('naxagoras@gmail.com')
             ->priority(Email::PRIORITY_HIGH)//pour faire ressortir l'email
             ->subject('Requete de devis')//object de l'email
@@ -84,7 +85,7 @@ class FrontController extends AbstractController {
             $manager->flush();
 
             $email = (new Email()) //creation de la class email
-            ->from('client@email.com')
+            ->from($commande->Getmail())
             ->to('naxagoras@gmail.com')
             ->priority(Email::PRIORITY_HIGH)//pour faire ressortir l'email
             ->subject('Requete de devis')//object de l'email
