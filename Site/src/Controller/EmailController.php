@@ -46,9 +46,8 @@ class EmailController extends AbstractController
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
+            ->priority(Email::PRIORITY_HIGH)
             ->subject('Requete de devis')
-            ->text('voila votre commande!')
             ->html('<p>Ouvrire la pj !</p>')
             ->attachFromPath('../public/wf3.pdf');
             

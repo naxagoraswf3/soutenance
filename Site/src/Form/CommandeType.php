@@ -41,25 +41,33 @@ class CommandeType extends AbstractType {
 				"help" => "Cliquer pour commencer la sélection",
 				"attr" => array('style' => 'width:100%'),
 			])
+
+			//champ d'imput caché qui apparaît sur le clic du bouton d'autre fonction
 			->add('autrefonction', HiddenType::class)
-			->add("captchaCode", CaptchaType::class, [
+
+			//Je crée le champ pour le captcha en utilisant l'ID marqué sur captcha.php et je renvoi un erreur si le captcha est pas valide
+			->add('captchaCode', CaptchaType::class, [
 				'captchaConfig' => 'ValidationForm',
 				'constraints' => [
 					new ValidCaptcha([
-						'message' => 'captcha invalide',
+						'message' => 'captcha invalid',
 					]),
 				],
 			])
+			//case a cocher pour accepter 
 			->add('agreeTerms', CheckboxType::class, [
 				'mapped' => false,
 				'constraints' => [
 					new IsTrue([
-						'message' => 'You should agree to our terms.',
+						'message' => 'Vous devez accepter les conditions.',
 					]),
 				],
 			])
+
 		;
+
 	}
+
 	public function configureOptions(OptionsResolver $resolver) {
 		$resolver->setDefaults([
 			'data_class' => Commande::class,

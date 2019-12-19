@@ -1,5 +1,5 @@
 <?php
-// app/config/packages/captcha.php
+
 if (!class_exists('CaptchaConfiguration')) {return;}
 
 // BotDetect PHP Captcha configuration options
@@ -10,4 +10,4 @@ return [
 		'ImageWidth' => 250,
 		'ImageHeight' => 50,
 	],
-];
+];//Je définis la taille de l'image du capthca et son ID

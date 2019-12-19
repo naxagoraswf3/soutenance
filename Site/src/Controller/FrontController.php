@@ -47,14 +47,13 @@ class FrontController extends AbstractController {
             $manager->flush();
 
 
-            $email = (new Email())
+            $email = (new Email()) //creation de la class email
             ->from('client@email.com')
             ->to('naxagoras@gmail.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Requete de devis')
-            ->text('voila votre commande!')
-            ->html('<p>Ouvrire la pj !</p>')
-            ->attachFromPath('../devis/mypdf.pdf');
+            ->priority(Email::PRIORITY_HIGH)//pour faire ressortir l'email
+            ->subject('Requete de devis')//object de l'email
+            ->html('<p>voici votre commande, Ouvrire la pj !</p>')//contenu de l'email
+            ->attachFromPath('../devis/mypdf.pdf'); //fonction pour envoyer un piece joint
             
 
         $mailer->send($email);
@@ -84,14 +83,13 @@ class FrontController extends AbstractController {
             $manager->persist($commande);
             $manager->flush();
 
-            $email = (new Email())
+            $email = (new Email()) //creation de la class email
             ->from('client@email.com')
             ->to('naxagoras@gmail.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Requete de devis')
-            ->text('voila votre commande!')
-            ->html('<p>Ouvrire la pj !</p>')
-            ->attachFromPath('../devis/mypdf.pdf');
+            ->priority(Email::PRIORITY_HIGH)//pour faire ressortir l'email
+            ->subject('Requete de devis')//object de l'email
+            ->html('<p>voici votre commande, Ouvrire la pj !</p>')//contenu de l'email
+            ->attachFromPath('../devis/mypdf.pdf'); //fonction pour envoyer un piece joint
             
 
         $mailer->send($email);
@@ -99,40 +97,11 @@ class FrontController extends AbstractController {
 
 
             return $this->redirectToRoute("form");
-        
-        
-        
-        
-        
-
-
-         ////////////// CAPTCHA V3  		
-		$url = "https://www.google.com/recaptcha/api/siteverify";
-		$data = [
-			'secret' => "6Lfcj8cUAAAAAJH7eVqz31CzmjcE049pNr8CLKKx",
-			'response' => $_POST['token'],
-			// 'remoteip' => $_SERVER['REMOTE_ADDR']
-		];
-
-		$options = array(
-		    'http' => array(
-		      'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-		      'method'  => 'POST',
-		      'content' => http_build_query($data)
-		    )
-		  );
-
-		$context  = stream_context_create($options);
-  	$response = file_get_contents($url, false, $context);
-
-       
-        
         }
         return $this->render('front/form.html.twig', [
             "form" => $form->createView(),
             'commande' => $commande,
-        ]);
-    }
+            'controller_name' => 'FrontController',
 
         ]);
     }

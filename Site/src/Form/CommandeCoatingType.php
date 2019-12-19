@@ -51,8 +51,10 @@ class CommandeCoatingType extends AbstractType {
 				"help" => "Cliquer pour commencer la sélection",
 				"attr" => array('style' => 'width:100%'),
 			])
-
+			//champ d'imput caché qui apparaît sur le clic du bouton d'autre fonction
 			->add('autrefonction', HiddenType::class)
+
+			//Je crée le champ pour le captcha en utilisant l'ID marqué sur captcha.php et je renvoi un erreur si le captcha est pas valide
 			->add('captchaCode', CaptchaType::class, [
 				'captchaConfig' => 'ValidationForm',
 				'constraints' => [
@@ -61,11 +63,12 @@ class CommandeCoatingType extends AbstractType {
 					]),
 				],
 			])
+			//case a cocher pour accepter 
 			->add('agreeTerms', CheckboxType::class, [
 				'mapped' => false,
 				'constraints' => [
 					new IsTrue([
-						'message' => 'You should agree to our terms.',
+						'message' => 'Vous devez accepter les conditions.',
 					]),
 				],
 			])
@@ -98,8 +101,8 @@ class CommandeCoatingType extends AbstractType {
 		}
 
 		return $output;
+	}
 
-    }
 	private function getChoices3() {
 		$choices = CommandeCoating::PROVENANCE;
 		$output = [];

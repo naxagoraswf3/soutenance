@@ -1,3 +1,5 @@
+{# integration de la base globale et du bootstrap #}
+
 {% extends "base.html.twig" %}
 {% form_theme formcoat 'bootstrap_4_layout.html.twig' %}
 
@@ -7,6 +9,8 @@
 {% block body %}
 <h1>Formulaire Coating</h1>
 <div class="container border">
+{# debut du formulaire #}
+
 	{{ form_start(formcoat) }}
 	<div class="row">
 		<div  class="col-md-4">{{form_row(formcoat.nom,  {"attr" : {"placeholder":"Votre nom"}})}}</div>
@@ -20,20 +24,31 @@
 		<div class="col-md-3">{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
 		<div class="col-md-6">{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
 		<div class="col-md-6">{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
-
+		{# bouton a cliquez pour ajouter une fonction.  #}
 		<p class="btn btn-outline-danger col-md-3 autre" id="autre">Autre  fonction</p>
 
+		{# champ imput caché qui apparaît lorsque vous cliquez sur le bouton #}
 		<div class="col-md-6">{{form_row(formcoat.autrefonction,  {"label": "Autre fonction", "attr" : {"placeholder":"Ajouter une fonction"}})}}</div>
-
 		<div class="col-md-12">{{form_row(formcoat.complement,  {"label": "Complément d'informations", "attr" : {"placeholder":"Facultatif"}})}}</div>
+		 {# verification captcha #}
+		<div class="col-md-4 offset-4 my-2">{{form_row(formcoat.captchaCode ,  {"label": "Êtes-vous un robot ?"})}}</div>
+		 {# bouton pour accepter les conditions #}
 		<div class="col-md-6 offset-3 my-2">{{form_row(formcoat.agreeTerms ,  {"label": "En envoyant ce formulaire, j'accepte que les informations saisies soient utilisées pour évaluer ma demande et me recontacter. ?"})}}</div>
-		<input type="hidden" id="token" name="token">
 
 	</div>
 		{{ form_rest(formcoat) }}
 
-		
-
+		{# code pour afficher un eventuel error #}
+		{% set formErrors = formcoat.vars.errors.form.getErrors(true) %}
+		{% if formErrors|length %}
+		 <div class="alert alert-danger">
+		 	<ul>
+			 {% for error in formErrors %}
+			 	<li> {{ error.message }}</li>
+			{% endfor %}		
+			</ul>
+			</div>	 
+			{% endif %}		
 
 
 	<button class="btn btn-outline-danger">
