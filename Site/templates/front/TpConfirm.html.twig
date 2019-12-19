@@ -43,15 +43,15 @@
                                         {% endfor %}
                                     </ol>
                                 </td>                               
-                                {% if commandes.autrefonction is not empty%}
+                                {% if commandes.autrefonction is not empty %}
                                 <td>{{ commandes.autrefonction}}</td>
                                 {% else %}
                                 <td>Pas de fonction supplémentaire</td>
                                 {% endif %}
 
-                                <th scope="col">{{ commandes.quantite }}</th>
+                                <td>{{ commandes.quantite }}</td>
 
-                                {% if commandes.complement is not empty%}
+                                {% if commandes.complement is not empty %}
                                 <td>{{ commandes.complement }}</td>
                                 {% else %}
                                 <td>Pas de détails sur la commande</td>

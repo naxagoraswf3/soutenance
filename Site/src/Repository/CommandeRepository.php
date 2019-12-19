@@ -20,13 +20,17 @@ class CommandeRepository extends ServiceEntityRepository
     }
 
 
+    // on définit ici la fonction findLastId qui nous permettra d'afficher un visuel du devis 
+    // on récupère toutes les commandes associées à l'entité
     public function findLastId(): ?Commande
     {
         return $this->createQueryBuilder('c')
-        ->innerJoin("c.fonction", "commande_fonction")
+        // nous trions les commandes par leur numéro de la plus ancienne à la plus récente
             ->orderBy('c.id', 'DESC')
+            // on définit l'affichage des commandes à une seule, donc seul la dernière (en terme de récence, donc celle que l'utilisateur vient de finaliser ) sera affichée
             ->setMaxResults(1)
             ->getQuery()
+            // on affiche la commande qui en résulte
             ->getOneOrNullResult()
         ;
     }

@@ -13,7 +13,7 @@ use App\Repository\CommandeCoatingRepository;
 class CommandeCoatingController extends AbstractController
 {
     /**
-     * @var CommandeRepository
+     * @var CommandeCoatingRepository
      */
     private $repository;
     public function __construct(CommandeCoatingRepository $repository)
@@ -27,29 +27,33 @@ class CommandeCoatingController extends AbstractController
      */
     public function showCT(CommandeCoatingRepository $repository){
       $commandes= $repository->findLastId("id");
-      dump($commandes);
+      // dump($commandes);
       return $this->render("front/CoatingConfirm.html.twig", ["commandes" => $commandes]);
     }
+
+
+    // l'annotation permet de définir la route http où sera affichée notre page
 
     /**
      * @Route("/formCoat", name="formCoat")
      */
+
+    // on définit une nouvelle fonction publique
     public function newCommandeCoating(Request $request, EntityManagerInterface $manager)
     {
     	$commande = new CommandeCoating();
 
-    	$form = $this->createForm(CommandeCoatingType::class,$commande);
-    	$form->handleRequest($request);
+    	$form = $this->createForm(CommandeCoatingType::class,$commande); // on crée un formulaire, que l'on lie à l'entité de notre commande
+    	$form->handleRequest($request); // le formulaire analyse si il a bien été rempli
     	if($form->isSubmitted() && $form->isValid()){
-    		$commande->setCreatedAt(new \DateTime());
+    		$commande->setCreatedAt(new \DateTime()); // la date de création se génère automatiquement à l'heure où le formulaire est soumit
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("devisCoat");
+            return $this->redirectToRoute("devisCoat"); // une fois le formulaire envoyé, l'utilisateur sera redirigé sur cette route http
         }
-        return $this->render('front/formCoat.html.twig', [
-            "formcoat" => $form->createView(),
-            'commandecoat' => $commande
+        return $this->render('front/formCoat.html.twig', [ // la route http affichera le fichier twig correspondant à l'adresse en paramètre du render
+            "formcoat" => $form->createView(), // ce paramètre est une variable qui servira à twig pour son affichage
         ]);
     }
 }
