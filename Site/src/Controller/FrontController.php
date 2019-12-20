@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\CommandeType;
 use App\Repository\CommandeRepository;
+use Captcha\Bundle\CaptchaBundle;
 
 class FrontController extends AbstractController {
 	/**
