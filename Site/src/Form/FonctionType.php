@@ -13,7 +13,6 @@ class FonctionType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('visible')
         ;
     }
 

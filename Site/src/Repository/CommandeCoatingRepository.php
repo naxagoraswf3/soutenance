@@ -19,13 +19,17 @@ class CommandeCoatingRepository extends ServiceEntityRepository
         parent::__construct($registry, CommandeCoating::class);
     }
 
+    // on définit ici la fonction findLastId qui nous permettra d'afficher un visuel du devis 
+    // on récupère toutes les commandes associées à l'entité
     public function findLastId(): ?CommandeCoating
     {
         return $this->createQueryBuilder('c')
-            ->innerJoin("c.fonction", "commande_coating_fonction")
+        // nous trions les commandes par leur numéro de façon décroissante (pour faire en sorte que la plus récente arrive en premier)
             ->orderBy('c.id', 'DESC')
+            // on définit l'affichage des commandes à une seule, donc seul la dernière (en terme de récence, donc celle que l'utilisateur vient de finaliser ) sera affichée
             ->setMaxResults(1)
             ->getQuery()
+            // on affiche la commande qui en résulte
             ->getOneOrNullResult()
         ;
     }

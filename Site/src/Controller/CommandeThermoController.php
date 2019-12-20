@@ -61,29 +61,31 @@ class CommandeThermoController extends AbstractController
         // creation du pdf dans la destination choisi
         file_put_contents($pdfFilepath, $output);
 
-        // redirection su la home page
+        // redirection sur la home page
        return $this->render('front/index.html.twig');
     }
 
+// l'annotation permet de définir la route http où sera affichée notre page
     /**
      * @Route("/formThermo", name="formThermo")
      */
+
+    // on définit une nouvelle fonction publique
     public function newCommande(Request $request, EntityManagerInterface $manager)
     {
     	$commande = new Commande();
 
-    	$form = $this->createForm(CommandeType::class,$commande);
-    	$form->handleRequest($request);
+    	$form = $this->createForm(CommandeType::class,$commande); // on crée un formulaire, que l'on lie à l'entité de notre commande
+    	$form->handleRequest($request); // le formulaire analyse si il a bien été rempli
     	if($form->isSubmitted() && $form->isValid()){
-    		$commande->setCreatedAt(new \DateTime());
+    		$commande->setCreatedAt(new \DateTime()); // la date de création se génère automatiquement à l'heure où le formulaire est soumit
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute("devisThermo");
+            return $this->redirectToRoute("devisThermo"); // une fois le formulaire envoyé, l'utilisateur sera redirigé sur cette route http
         }
-        return $this->render('front/formThermo.html.twig', [
-            "form" => $form->createView(),
-             "formcoat" => $form->createView()
+        return $this->render('front/formThermo.html.twig', [ // la route http affichera le fichier twig correspondant à l'adresse en paramètre du render
+            "form" => $form->createView(), // ce paramètre est une variable qui servira à twig pour son affichage
         ]);
     }
 

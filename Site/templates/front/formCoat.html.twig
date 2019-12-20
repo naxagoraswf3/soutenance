@@ -19,7 +19,7 @@
 		<div class="col-md-4 offset-2">{{form_row(formcoat.formulation, {"label": "Type de formulation"})}}</div>
 		<div class="col-md-3">{{form_row(formcoat.provenance, {"label": "Fourniture de la résine"})}}</div>
 		<div class="col-md-6">{{form_row(formcoat.fonction,  {"label": "Fonction(s)", "attr" : {"placeholder":"Cliquer pour commencer la sélection"}})}}</div>
-		<div class="col-md-6">{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
+		<div class="col-md-6" type="number" min="0">{{form_row(formcoat.quantite,  {"label": "Quantité", "attr" : {"placeholder":"Quantité d'essai minimale (en grammes)"}})}}</div>
 
 		<p class="btn btn-outline-danger col-md-3 autre" id="autre">Autre  fonction</p>
 

@@ -37,7 +37,6 @@ easy_admin:
             list:
                 fields:
                   - {property: "name"}
-                  - {property: "visible"}
 
 
 

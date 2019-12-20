@@ -19,15 +19,6 @@ class FonctionRepository extends ServiceEntityRepository
         parent::__construct($registry, Fonction::class);
     }
 
-     public function findLastId(): ?Fonction
-    {
-        return $this->createQueryBuilder('f')
-            ->innerJoin("f.id", "commande_coating_fonction")
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-
     // /**
     //  * @return Fonction[] Returns an array of Fonction objects
     //  */
